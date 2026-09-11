@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Force Scroll to Top on Page Load (Overrides URL Hash) -->
+    <!-- Force Scroll to Top on Page Load -->
     <script>
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -112,20 +112,17 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
         .logo-img {
-            height: 42px;
+            height: 48px;
             width: auto;
         }
 
-        .brand-name {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--gold-primary);
-            text-decoration: none;
-            letter-spacing: 0.5px;
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         nav {
@@ -143,6 +140,19 @@
 
         nav a:hover {
             color: var(--gold-primary);
+        }
+
+        /* Language Selector */
+        .lang-select {
+            padding: 0.35rem 0.6rem;
+            border-radius: 6px;
+            border: 1px solid var(--gold-primary);
+            background-color: var(--white);
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            outline: none;
         }
 
         /* Hero Section */
@@ -272,11 +282,20 @@
             flex-shrink: 0;
         }
 
+        body[dir="rtl"] .store-badge svg {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+
         .badge-text {
             display: flex;
             flex-direction: column;
             text-align: left;
             line-height: 1.1;
+        }
+
+        body[dir="rtl"] .badge-text {
+            text-align: right;
         }
 
         .badge-text .small {
@@ -411,6 +430,10 @@
             padding-top: 1.2rem;
         }
 
+        body[dir="rtl"] .policy-content {
+            text-align: right;
+        }
+
         /* Modal Dialog for Google Play notice */
         .modal-overlay {
             display: none;
@@ -493,10 +516,9 @@
                 padding: 0.8rem 1rem;
             }
 
-            nav {
+            .nav-right {
                 width: 100%;
-                justify-content: center;
-                gap: 15px;
+                justify-content: space-between;
                 border-top: 1px solid #F0F0F0;
                 padding-top: 8px;
             }
@@ -516,46 +538,55 @@
     <!-- Header / Navbar -->
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Golden Opportunity AB Logo" class="logo-img">
-            <a href="#" class="brand-name">GOLDEN OPPORTUNITY</a>
+            <a href="#">
+                <img src="logo.png" alt="Golden Opportunity AB - Sara Bern Logo" class="logo-img">
+            </a>
         </div>
-        <nav>
-            <a href="#app">App</a>
-            <a href="#books">Books</a>
-            <a href="#about">About</a>
-            <a href="#privacy">Privacy</a>
-        </nav>
+        <div class="nav-right">
+            <nav>
+                <a href="#app" id="nav-app">App</a>
+                <a href="#books" id="nav-books">Books</a>
+                <a href="#about" id="nav-about">About</a>
+                <a href="#privacy" id="nav-privacy">Privacy</a>
+            </nav>
+            <select class="lang-select" onchange="changeLanguage(this.value)">
+                <option value="en" selected>EN</option>
+                <option value="sv">SV</option>
+                <option value="ar">AR</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Reduce Stress & Lower Cortisol with EFT Tapping</h1>
-        <p>Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Discover self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and wellness literature designed to restore emotional balance.</p>
+        <h1 id="hero-title">Reduce Stress & Lower Cortisol with EFT Tapping</h1>
+        <p id="hero-desc">Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Discover self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and wellness literature designed to restore emotional balance.</p>
     </section>
 
     <main class="container">
         
         <!-- Mobile App Section -->
-        <h2 id="app" class="section-title">GO EFT Tapping App</h2>
+        <h2 id="app" class="section-title"><span id="app-heading">GO EFT Tapping App</span></h2>
         <div class="grid" style="grid-template-columns: 1fr; max-width: 550px; margin: 0 auto 3rem auto;">
             <div class="card">
                 <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App - Knackning för stress och kortisol" class="card-img">
-                <h3>GO EFT Tapping Mobile Application</h3>
-                <p>An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian with zero data retention.</p>
+                <h3 id="app-title">GO EFT Tapping Mobile Application</h3>
+                <p id="app-desc">An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian with zero data retention.</p>
                 
                 <div class="store-buttons">
-                    <!-- Official Apple App Store Badge -->
+                    <!-- Apple App Store Badge -->
                     <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="store-badge" aria-label="Download on Apple App Store">
                         <svg viewBox="0 0 384 512" fill="currentColor">
                             <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-15.2 69.5-34.3z"/>
                         </svg>
                         <div class="badge-text">
-                            <span class="small">Download on the</span>
+                            <span class="small" id="badge-appstore-sub">Download on the</span>
                             <span class="big">App Store</span>
                         </div>
                     </a>
 
-                    <!-- Official Google Play Badge (Triggers Modal Notice) -->
+                    <!-- Google Play Badge -->
                     <a href="#" onclick="openGooglePlayNotice(event)" class="store-badge" aria-label="Get it on Google Play">
                         <svg viewBox="0 0 512 512" fill="currentColor">
                             <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
@@ -570,19 +601,18 @@
         </div>
 
         <!-- Books Section -->
-        <h2 id="books" class="section-title">Books on Stress & Wellness</h2>
+        <h2 id="books" class="section-title"><span id="books-heading">Books on Stress & Wellness</span></h2>
         <div class="grid">
             
             <!-- Lugn i stormen Card -->
             <div class="card">
                 <img src="eft-book.jpg" alt="Lugn i stormen av Sara Bern - Tapping och knackning för stress" class="card-img">
-                <h3>Lugn i stormen – Sara Bern</h3>
-                <p>A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to manage acute <strong>stress</strong> and lower <strong>kortisol</strong> levels.</p>
+                <h3 id="book1-title">Lugn i stormen – Sara Bern</h3>
+                <p id="book1-desc">A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to manage acute <strong>stress</strong> and lower <strong>kortisol</strong> levels.</p>
                 
-                <!-- Adlibris Purchase Button Badge -->
                 <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="adlibris-badge" aria-label="Köp hos Adlibris">
                     <div class="adlibris-text">
-                        <span>Köp hos</span> <span class="brand">Adlibris</span><span class="dot">.</span>
+                        <span id="buy-book1">Buy at</span> <span class="brand">Adlibris</span><span class="dot">.</span>
                     </div>
                 </a>
             </div>
@@ -590,13 +620,12 @@
             <!-- Green Smoothies Card -->
             <div class="card">
                 <img src="smoothies-book.jpg" alt="Green Smoothies Book - Golden Opportunity AB" class="card-img">
-                <h3>Green Smoothies for Vitality</h3>
-                <p>Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.</p>
+                <h3 id="book2-title">Green Smoothies for Vitality</h3>
+                <p id="book2-desc">Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.</p>
                 
-                <!-- Adlibris Purchase Button Badge -->
                 <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="adlibris-badge" aria-label="Köp hos Adlibris">
                     <div class="adlibris-text">
-                        <span>Köp hos</span> <span class="brand">Adlibris</span><span class="dot">.</span>
+                        <span id="buy-book2">Buy at</span> <span class="brand">Adlibris</span><span class="dot">.</span>
                     </div>
                 </a>
             </div>
@@ -604,20 +633,20 @@
         </div>
 
         <!-- About / Contact Section -->
-        <h2 id="about" class="section-title">About Sara Bern</h2>
+        <h2 id="about" class="section-title"><span id="about-heading">About Sara Bern</span></h2>
         <div class="profile-card">
             <img src="sara-bern.jpg" alt="Sara Bern - EFT Terapeut, Stressterapeut & Coach" class="profile-img">
             <h3>Sara Bern</h3>
-            <div class="profile-subtitle">EFT Therapist | Stress Therapist | Coach</div>
-            <p>Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.</p>
-            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn-linkedin">Connect on LinkedIn</a>
+            <div class="profile-subtitle" id="profile-role">EFT Therapist | Stress Therapist | Coach</div>
+            <p id="profile-desc">Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.</p>
+            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn-linkedin" id="linkedin-btn">Connect on LinkedIn</a>
         </div>
 
         <!-- Collapsible Privacy Policy -->
         <div id="privacy" class="policy-container">
             <details>
-                <summary>Privacy Policy (Click to view)</summary>
-                <div class="policy-content">
+                <summary id="privacy-summary">Privacy Policy (Click to view)</summary>
+                <div class="policy-content" id="privacy-body">
                     <p><strong>Last Updated:</strong> September 11, 2026</p>
 
                     <h3>1. Data Controller</h3>
@@ -648,8 +677,8 @@
     <!-- Modal Popup for Google Play Notice -->
     <div id="googlePlayModal" class="modal-overlay" onclick="closeGooglePlayNotice(event)">
         <div class="modal-card" onclick="event.stopPropagation()">
-            <h4>Information</h4>
-            <p>Android-appen är temporärt ur funktion. Arbete för att återställa den pågår.</p>
+            <h4 id="modal-title">Information</h4>
+            <p id="modal-msg">Android-appen är temporärt ur funktion. Arbete för att återställa den pågår.</p>
             <button class="btn-modal-close" onclick="closeGooglePlayNotice(event)">OK</button>
         </div>
     </div>
@@ -657,13 +686,149 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Golden Opportunity AB. Founded by Sara Bern. All rights reserved.</p>
-        <p style="margin-top:8px;">
-            <a href="#privacy">Privacy Policy</a> | <a href="#about">Contact Sara Bern</a>
-        </p>
     </footer>
 
-    <!-- JavaScript for Modal Interactivity -->
+    <!-- Multilingual Dictionary & Switcher Script -->
     <script>
+        const translations = {
+            en: {
+                navApp: "App", navBooks: "Books", navAbout: "About", navPrivacy: "Privacy",
+                heroTitle: "Reduce Stress & Lower Cortisol with EFT Tapping",
+                heroDesc: "Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Discover self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and wellness literature designed to restore emotional balance.",
+                appHeading: "GO EFT Tapping App",
+                appTitle: "GO EFT Tapping Mobile Application",
+                appDesc: "An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian with zero data retention.",
+                badgeAppStoreSub: "Download on the",
+                booksHeading: "Books on Stress & Wellness",
+                book1Title: "Lugn i stormen – Sara Bern",
+                book1Desc: "A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to manage acute <strong>stress</strong> and lower <strong>kortisol</strong> levels.",
+                buyBook1: "Buy at",
+                book2Title: "Green Smoothies for Vitality",
+                book2Desc: "Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.",
+                buyBook2: "Buy at",
+                aboutHeading: "About Sara Bern",
+                profileRole: "EFT Therapist | Stress Therapist | Coach",
+                profileDesc: "Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.",
+                linkedinBtn: "Connect on LinkedIn",
+                privacySummary: "Privacy Policy (Click to view)",
+                modalTitle: "Information",
+                modalMsg: "The Android app is temporarily unavailable. Work is underway to restore it."
+            },
+            sv: {
+                navApp: "App", navBooks: "Böcker", navAbout: "Om mig", navPrivacy: "Integritetspolicy",
+                heroTitle: "Minska stress & sänk kortisol med EFT Tapping",
+                heroDesc: "Välkommen till Golden Opportunity AB av <strong>Sara Bern</strong>. Upptäck självhjälpsverktyg, guidad <strong>tapping (knackning)</strong>, stresshantering och hälsoböcker för att återställa känslomässig balans.",
+                appHeading: "GO EFT Tapping App",
+                appTitle: "GO EFT Tapping Mobilapplikation",
+                appDesc: "Ett effektivt självhjälpsverktyg som använder <strong>tapping (knackning)</strong> för att minska vardags<strong>stress</strong> och balansera <strong>kortisol</strong>nivåer. Guidade ljudsessioner på 4 språk: engelska, svenska, arabiska och ukrainska helt utan datalagring.",
+                badgeAppStoreSub: "Ladda ned på",
+                booksHeading: "Böcker om stress & hälsa",
+                book1Title: "Lugn i stormen – Sara Bern",
+                book1Desc: "En praktisk guide om Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Lär dig hantera akut <strong>stress</strong> och sänka högt <strong>kortisol</strong>.",
+                buyBook1: "Köp hos",
+                book2Title: "Green Smoothies för vitalitet",
+                book2Desc: "Upptäck näringsrika recept på gröna smoothies som ger kroppen näring, stöttar din <strong>stress</strong>hantering och ökar din energi.",
+                buyBook2: "Köp hos",
+                aboutHeading: "Om Sara Bern",
+                profileRole: "EFT-terapeut | Stressterapeut | Coach",
+                profileDesc: "Välkommen till <strong>Golden Opportunity AB</strong>! Som certifierad EFT-terapeut (specialiserad på <strong>tapping / knackning</strong>), stressterapeut och coach hjälper jag dig att minska <strong>stress</strong> och reglera <strong>kortisol</strong> för långsiktig hälsa och välmående.",
+                linkedinBtn: "Kontakta på LinkedIn",
+                privacySummary: "Integritetspolicy (Klicka för att visa)",
+                modalTitle: "Information",
+                modalMsg: "Android-appen är temporärt ur funktion. Arbete för att återställa den pågår."
+            },
+            ar: {
+                navApp: "التطبيق", navBooks: "الكتب", navAbout: "عن الكاتبة", navPrivacy: "الخصوصية",
+                heroTitle: "تقليل التوتر وخفض الكورتيزول باستخدام تقنية EFT Tapping",
+                heroDesc: "مرحبًا بكم في Golden Opportunity AB بقلم <strong>سارة بيرن</strong>. اكتشف أدوات المساعدة الذاتية، وجلسات <strong>النقر (Tapping)</strong> الموجهة، وتقنيات إدارة التوتر كتب الصحة والرفاهية.",
+                appHeading: "تطبيق GO EFT Tapping",
+                appTitle: "تطبيق GO EFT Tapping للموبايل",
+                appDesc: "أداة فعالة للمساعدة الذاتية تستخدم <strong>النقر (Tapping)</strong> لمكافحة <strong>التوتر</strong> اليومي وموازنة مستويات <strong>الكورتيزول</strong>. جلسات صوتية موجهة بـ 4 لغات: الإنجليزية، السويدية، العربية، والأوكرانية بدون احتفاظ بالبيانات.",
+                badgeAppStoreSub: "تنزيل من",
+                booksHeading: "كتب عن التوتر والصحة",
+                book1Title: "الهدوء في العاصفة – سارة بيرن",
+                book1Desc: "دليل خطوة بخطوة حول تقنيات الحرية النفسية (EFT / <strong>النقر</strong>). تعلم كيفية إدارة <strong>التوتر</strong> الحاد وخفض مستويات <strong>الكورتيزول</strong>.",
+                buyBook1: "شراء من",
+                book2Title: "العصائر الخضراء للحيوية",
+                book2Desc: "اكتشف وصفات العصائر الخضراء الغنية بالمغذيات التي تغذي جسمك وتدعم روتين إدارة <strong>التوتر</strong> وتزيد من الحيوية.",
+                buyBook2: "شراء من",
+                aboutHeading: "عن سارة بيرن",
+                profileRole: "معالجة EFT | معالجة توتر | مدربة",
+                profileDesc: "مرحبًا بكم في <strong>Golden Opportunity AB</strong>! بصفتي معالجة EFT معتمدة (متخصصة في <strong>النقر / Tapping</strong>)، ومعالجة توتر ومدربة، أساعد الأفراد على إتقان تقليل <strong>التوتر</strong> وتنظيم <strong>الكورتيزول</strong> للحصول على صحة وحيوية طويلة الأمد.",
+                linkedinBtn: "تواصل عبر LinkedIn",
+                privacySummary: "سياسة الخصوصية (انقر للعرض)",
+                modalTitle: "معلومات",
+                modalMsg: "تطبيق أندرويد غير متوفر مؤقتًا. العمل جارٍ لاستعادته."
+            },
+            uk: {
+                navApp: "Додаток", navBooks: "Книги", navAbout: "Про мене", navPrivacy: "Конфіденційність",
+                heroTitle: "Зменшуйте стрес та знижуйте кортизол за допомогою EFT Tapping",
+                heroDesc: "Ласкаво просимо до Golden Opportunity AB від <strong>Сари Берн</strong>. Відкрийте для себе інструменти самодопомоги, кероване <strong>простукування (Tapping)</strong>, техніки управління стресом та літературу для відновлення емоційного балансу.",
+                appHeading: "Додаток GO EFT Tapping",
+                appTitle: "Мобільний додаток GO EFT Tapping",
+                appDesc: "Ефективний інструмент самодопомоги з використанням <strong>простукування (Tapping)</strong> для боротьби зі щоденним <strong>стресом</strong> та балансування рівня <strong>кортизолу</strong>. Аудіосесії 4 мовами: англійською, шведською, арабською та українською без збереження даних.",
+                badgeAppStoreSub: "Завантажити в",
+                booksHeading: "Книги про стрес та здоров'я",
+                book1Title: "Спокій у шторм – Сара Берн",
+                book1Desc: "Покроковий посібник з технік емоційного звільнення (EFT / <strong>простукування</strong>). Дізнайтеся, як керувати гострим <strong>стресом</strong> та знижувати рівень <strong>кортизолу</strong>.",
+                buyBook1: "Купити на",
+                book2Title: "Зелені смузі для життєвої сили",
+                book2Desc: "Відкрийте для себе рецепти поживних зелених смузі, які живлять ваше тіло, доповнюють рутину управління <strong>стресом</strong> та підвищують енергію.",
+                buyBook2: "Купити на",
+                aboutHeading: "Про Сару Берн",
+                profileRole: "EFT-терапевт | Терапевт зі стресу | Коуч",
+                profileDesc: "Ласкаво просимо до <strong>Golden Opportunity AB</strong>! Як сертифікований EFT-терапевт (спеціалізуюся на <strong>простукуванні / Tapping</strong>), терапевт зі стресу та коуч, я допомагаю зменшити <strong>стрес</strong> та врегулювати <strong>кортизол</strong> для тривалого здоров'я та життєвої сили.",
+                linkedinBtn: "Зв'язатися в LinkedIn",
+                privacySummary: "Політика конфіденційності (Натисніть для перегляду)",
+                modalTitle: "Інформація",
+                modalMsg: "Додаток для Android тимчасово недоступний. Тривають роботи з його відновлення."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const t = translations[lang] || translations.en;
+            
+            // Set Text Direction (RTL for Arabic)
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // Header Nav
+            document.getElementById('nav-app').textContent = t.navApp;
+            document.getElementById('nav-books').textContent = t.navBooks;
+            document.getElementById('nav-about').textContent = t.navAbout;
+            document.getElementById('nav-privacy').textContent = t.navPrivacy;
+
+            // Hero
+            document.getElementById('hero-title').innerHTML = t.heroTitle;
+            document.getElementById('hero-desc').innerHTML = t.heroDesc;
+
+            // App Section
+            document.getElementById('app-heading').innerHTML = t.appHeading;
+            document.getElementById('app-title').innerHTML = t.appTitle;
+            document.getElementById('app-desc').innerHTML = t.appDesc;
+            document.getElementById('badge-appstore-sub').textContent = t.badgeAppStoreSub;
+
+            // Books Section
+            document.getElementById('books-heading').innerHTML = t.booksHeading;
+            document.getElementById('book1-title').innerHTML = t.book1Title;
+            document.getElementById('book1-desc').innerHTML = t.book1Desc;
+            document.getElementById('buy-book1').textContent = t.buyBook1;
+
+            document.getElementById('book2-title').innerHTML = t.book2Title;
+            document.getElementById('book2-desc').innerHTML = t.book2Desc;
+            document.getElementById('buy-book2').textContent = t.buyBook2;
+
+            // Profile Section
+            document.getElementById('about-heading').innerHTML = t.aboutHeading;
+            document.getElementById('profile-role').innerHTML = t.profileRole;
+            document.getElementById('profile-desc').innerHTML = t.profileDesc;
+            document.getElementById('linkedin-btn').textContent = t.linkedinBtn;
+
+            // Privacy & Modal
+            document.getElementById('privacy-summary').textContent = t.privacySummary;
+            document.getElementById('modal-title').textContent = t.modalTitle;
+            document.getElementById('modal-msg').textContent = t.modalMsg;
+        }
+
         function openGooglePlayNotice(event) {
             event.preventDefault();
             document.getElementById('googlePlayModal').style.display = 'flex';
