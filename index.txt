@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Opportunity AB – GO EFT Tapping & Wellness Books</title>
+    <style>
+        /* Modern CSS Variables for Design System */
+        :root {
+            --gold-primary: #C5A059;
+            --gold-hover: #A3803C;
+            --gold-light: #FAF6EE;
+            --green-accent: #2E5A44;
+            --green-light: #EBF3EE;
+            --text-dark: #222222;
+            --text-muted: #555555;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid #E0E0E0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-content: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--gold-light) 0%, #FFFFFF 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #EBEBEB;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold-primary);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Product Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 12px;
+            border: 1px solid #EAEAEA;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-img {
+            max-width: 220px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-appstore {
+            background-color: var(--gold-primary);
+            color: var(--white);
+        }
+
+        .btn-appstore:hover {
+            background-color: var(--gold-hover);
+        }
+
+        .btn-playstore {
+            background-color: var(--green-accent);
+            color: var(--white);
+        }
+
+        .btn-playstore:hover {
+            background-color: #214332;
+        }
+
+        .btn-book {
+            background-color: var(--white);
+            color: var(--text-dark);
+            border: 2px solid var(--gold-primary);
+        }
+
+        .btn-book:hover {
+            background-color: var(--gold-light);
+        }
+
+        /* Privacy Policy Container */
+        .policy-section {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border: 1px solid #EAEAEA;
+            margin-top: 3rem;
+        }
+
+        .policy-section h2 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .policy-section h3 {
+            margin: 1.5rem 0 0.5rem 0;
+            color: var(--text-dark);
+        }
+
+        .policy-section p, .policy-section ul {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            padding-left: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1A1A1A;
+            color: #CCCCCC;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--gold-primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-container">
+            <!-- Replace 'logo.png' with the path to your gold logo file -->
+            <img src="logo.png" alt="Golden Opportunity Logo" class="logo-img">
+            <a href="#" class="brand-name">GOLDEN OPPORTUNITY</a>
+        </div>
+        <nav>
+            <a href="#app">App</a>
+            <a href="#books">Books</a>
+            <a href="#privacy">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering Wellness & Emotional Balance</h1>
+        <p>Discover self-help tools through guided EFT Tapping and nourishing lifestyle literature designed to reduce stress and inspire vitality.</p>
+    </section>
+
+    <main class="container">
+        
+        <!-- Mobile App Section -->
+        <h2 id="app" class="section-title">GO EFT Tapping App</h2>
+        <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto 4rem auto;">
+            <div class="card">
+                <!-- Replace 'app-screenshot.png' with your App Store screenshot -->
+                <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App" class="card-img" style="max-width:280px;">
+                <h3>GO EFT Tapping Mobile Application</h3>
+                <p>A practical self-help tool for stress management and emotional balance. Features audio-guided tapping rounds in 4 languages: English, Swedish, Arabic, and Ukrainian. Completely private with zero data retention.</p>
+                
+                <div class="btn-group">
+                    <!-- Put your actual App Store link below -->
+                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
+                    <!-- Put your actual Google Play link below -->
+                    <a href="YOUR_GOOGLE_PLAY_LINK" target="_blank" class="btn btn-playstore">Get it on Google Play</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Books Section -->
+        <h2 id="books" class="section-title">Books & Literature</h2>
+        <div class="grid">
+            
+            <!-- EFT Book Card -->
+            <div class="card">
+                <!-- Replace 'eft-book.jpg' with your EFT book cover image -->
+                <img src="eft-book.jpg" alt="EFT Tapping Book Cover" class="card-img">
+                <h3>EFT & Stress Release</h3>
+                <p>A practical guide on Emotional Freedom Techniques (EFT). Learn step-by-step how to reduce anxiety, process heavy emotions, and reset your nervous system.</p>
+                <a href="#" class="btn btn-book">Order / Read More</a>
+            </div>
+
+            <!-- Green Smoothies Book Card -->
+            <div class="card">
+                <!-- Replace 'smoothies-book.jpg' with your Green Smoothies book image -->
+                <img src="smoothies-book.jpg" alt="Green Smoothies Book Cover" class="card-img">
+                <h3>Green Smoothies & Vitality</h3>
+                <p>Explore simple, nutrient-rich green smoothie recipes to boost energy, improve digestion, and support daily holistic wellness.</p>
+                <a href="#" class="btn btn-book">Order / Read More</a>
+            </div>
+
+        </div>
+
+        <!-- Engelsk Integritetspolicy (Reaktivationskrav för Google Play) -->
+        <div id="privacy" class="policy-section">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> September 11, 2026</p>
+
+            <h3>1. Data Controller</h3>
+            <p>This Mobile Application and website are operated by <strong>Golden Opportunity AB</strong>, based in Sweden.</p>
+            <p>Contact / Data Protection Lead: Sara Bern<br>Email: sara@goldenopportunity.se</p>
+
+            <h3>2. Scope and Supported Languages</h3>
+            <p>This Privacy Policy applies to the GO EFT Tapping mobile application available on iOS and Android. The application interface and audio guidance support 4 languages: Swedish, English, Arabic, and Ukrainian.</p>
+
+            <h3>3. Processing of Session Data (Health Data)</h3>
+            <ul>
+                <li><strong>Data Processing:</strong> During a tapping round, the app processes user spoken inputs or health assessments solely to facilitate the session.</li>
+                <li><strong>Zero-Storage Architecture:</strong> Audio data and session details remain exclusively in temporary volatile memory (RAM). <strong>All spoken data and session history are immediately deleted upon leaving or closing the app.</strong></li>
+                <li><strong>No Server Uploads:</strong> We do not record, store, or transmit your voice or personal health data to external cloud servers.</li>
+            </ul>
+
+            <h3>4. Third-Party Sharing</h3>
+            <p>We do not collect, share, or sell user personal data, analytics, or health information to third-party advertisers or data brokers.</p>
+
+            <h3>5. Rights Under GDPR</h3>
+            <p>Because no personal health data is saved on servers or devices after session completion, no persistent tracking takes place. European users maintain all rights under the GDPR. For inquiries, contact <a href="mailto:sara@goldenopportunity.se">sara@goldenopportunity.se</a>.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Golden Opportunity AB. All rights reserved.</p>
+        <p style="margin-top:8px;">
+            <a href="#privacy">Privacy Policy</a> | <a href="#app">GO EFT Tapping App</a>
+        </p>
+    </footer>
+
+</body>
+</html>
