@@ -122,7 +122,7 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         nav {
@@ -142,17 +142,23 @@
             color: var(--gold-primary);
         }
 
-        /* Language Selector */
+        /* Language Selector with Flag Emojis */
         .lang-select {
-            padding: 0.35rem 0.6rem;
-            border-radius: 6px;
-            border: 1px solid var(--gold-primary);
+            padding: 0.4rem 0.7rem;
+            border-radius: 8px;
+            border: 1.5px solid var(--gold-primary);
             background-color: var(--white);
             color: var(--text-dark);
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             cursor: pointer;
             outline: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            transition: border-color 0.2s ease;
+        }
+
+        .lang-select:hover {
+            border-color: var(--gold-hover);
         }
 
         /* Hero Section */
@@ -549,11 +555,13 @@
                 <a href="#about" id="nav-about">About</a>
                 <a href="#privacy" id="nav-privacy">Privacy</a>
             </nav>
+            
+            <!-- Language Dropdown Menu with Full Names & Flag Emojis -->
             <select class="lang-select" onchange="changeLanguage(this.value)">
-                <option value="en" selected>EN</option>
-                <option value="sv">SV</option>
-                <option value="ar">AR</option>
-                <option value="uk">UK</option>
+                <option value="en" selected>🇬🇧 English</option>
+                <option value="sv">🇸🇪 Svenska</option>
+                <option value="ar">🇦🇪 العربية</option>
+                <option value="uk">🇺🇦 Українська</option>
             </select>
         </div>
     </header>
