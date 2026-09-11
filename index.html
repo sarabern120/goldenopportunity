@@ -3,15 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Opportunity AB – GO EFT Tapping & Wellness Books</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness</title>
+    <meta name="title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness">
+    <meta name="description" content="Sara Bern - Certified EFT Therapist, Stress Therapist & Coach at Golden Opportunity AB. Discover GO EFT Tapping app, stress reduction, cortisol control & wellness books (Lugn i stormen & Green Smoothies).">
+    <meta name="keywords" content="tapping, knackning, stress, kortisol, sara bern, Golden Opportunity, Golden Opportunity AB, EFT therapist, stress therapist, EFT tapping app, Lugn i stormen, green smoothies">
+    <meta name="author" content="Sara Bern">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sarabern120.github.io/goldenopportunity/">
+    <meta property="og:title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress & Kortisol">
+    <meta property="og:description" content="Discover GO EFT Tapping mobile app and books by Sara Bern (EFT therapist & Stress Coach). Reduce stress, manage cortisol, and find inner calm.">
+    <meta property="og:image" content="https://sarabern120.github.io/goldenopportunity/sara-bern.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sarabern120.github.io/goldenopportunity/#organization",
+          "name": "Golden Opportunity AB",
+          "url": "https://sarabern120.github.io/goldenopportunity/",
+          "logo": "https://sarabern120.github.io/goldenopportunity/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "Sara Bern",
+            "jobTitle": "EFT Therapist, Stress Therapist & Coach"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://sarabern120.github.io/goldenopportunity/#person",
+          "name": "Sara Bern",
+          "jobTitle": "EFT Therapist & Stress Coach",
+          "worksFor": {
+            "@id": "https://sarabern120.github.io/goldenopportunity/#organization"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/sarabern/"
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --gold-primary: #C5A059;
             --gold-hover: #A3803C;
             --gold-light: #FAF6EE;
             --green-accent: #2E5A44;
-            --green-light: #EBF3EE;
-            --text-dark: #222222;
+            --text-dark: #1A1A1A;
             --text-muted: #555555;
             --bg-light: #FAFAFA;
             --white: #FFFFFF;
@@ -22,51 +69,59 @@
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             color: var(--text-dark);
             background-color: var(--bg-light);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Header Navigation */
         header {
             background-color: var(--white);
             border-bottom: 1px solid #E0E0E0;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .logo-img {
-            height: 48px;
+            height: 42px;
             width: auto;
         }
 
         .brand-name {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--gold-primary);
             text-decoration: none;
             letter-spacing: 0.5px;
         }
 
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
         nav a {
             color: var(--text-dark);
             text-decoration: none;
             font-weight: 500;
-            margin-left: 20px;
+            font-size: 0.95rem;
             transition: color 0.2s ease;
         }
 
@@ -77,61 +132,62 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--gold-light) 0%, #FFFFFF 100%);
-            padding: 4rem 2rem;
+            padding: 3rem 1.2rem;
             text-align: center;
             border-bottom: 1px solid #EBEBEB;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.25;
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: clamp(0.95rem, 3vw, 1.15rem);
             color: var(--text-muted);
-            max-width: 650px;
-            margin: 0 auto 2rem auto;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         /* Container & Titles */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 2.5rem 1rem;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 2rem;
             position: relative;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 50px;
             height: 3px;
             background-color: var(--gold-primary);
-            margin: 10px auto 0 auto;
+            margin: 8px auto 0 auto;
             border-radius: 2px;
         }
 
         /* Product Cards Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .card {
             background-color: var(--white);
             border-radius: 12px;
             border: 1px solid #EAEAEA;
-            padding: 2rem;
+            padding: 1.8rem 1.2rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             display: flex;
             flex-direction: column;
@@ -140,16 +196,18 @@
         }
 
         .card-img {
+            width: 100%;
             max-width: 220px;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            margin-bottom: 1.2rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            object-fit: contain;
         }
 
         .card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.6rem;
         }
 
         .card p {
@@ -159,157 +217,231 @@
             flex-grow: 1;
         }
 
-        /* Buttons */
-        .btn-group {
+        /* Official Store Buttons Layout */
+        .store-buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             width: 100%;
+            max-width: 260px;
+            align-items: center;
         }
 
-        .btn {
+        .store-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 52px;
+            background-color: #000000;
+            color: #FFFFFF;
+            border-radius: 8px;
+            text-decoration: none;
+            padding: 0 16px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+            border: 1px solid #000000;
+        }
+
+        .store-badge:hover, .store-badge:active {
+            transform: translateY(-2px);
+            background-color: #222222;
+        }
+
+        .store-badge svg {
+            height: 26px;
+            width: auto;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .badge-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 1.1;
+        }
+
+        .badge-text .small {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #CCCCCC;
+        }
+
+        .badge-text .big {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        /* Book Button */
+        .btn-book {
             display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
+            width: 100%;
+            max-width: 260px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
-            transition: all 0.2s ease;
             text-align: center;
-        }
-
-        .btn-appstore {
-            background-color: var(--gold-primary);
-            color: var(--white);
-        }
-
-        .btn-appstore:hover {
-            background-color: var(--gold-hover);
-        }
-
-        .btn-playstore {
-            background-color: var(--green-accent);
-            color: var(--white);
-        }
-
-        .btn-playstore:hover {
-            background-color: #214332;
-        }
-
-        .btn-book {
             background-color: var(--white);
             color: var(--text-dark);
             border: 2px solid var(--gold-primary);
+            transition: all 0.2s ease;
         }
 
         .btn-book:hover {
             background-color: var(--gold-light);
         }
 
+        /* Profile Section */
+        .profile-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            border: 1px solid #EAEAEA;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--gold-primary);
+            margin-bottom: 1.2rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .profile-subtitle {
+            color: var(--gold-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .btn-linkedin {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
             background-color: #0A66C2;
             color: var(--white);
-            margin-top: 1rem;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s ease;
         }
 
         .btn-linkedin:hover {
             background-color: #084e96;
         }
 
-        /* Profile / Contact Section */
-        .profile-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            border: 1px solid #EAEAEA;
-            padding: 3rem 2rem;
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 4rem auto;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--gold-primary);
-            margin-bottom: 1.5rem;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-
-        .profile-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .profile-subtitle {
-            color: var(--gold-primary);
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .profile-card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Collapsible Privacy Policy (Hidden by default) */
+        /* Collapsible Privacy Policy */
         .policy-container {
             background-color: var(--white);
             border-radius: 12px;
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 1.5rem;
             border: 1px solid #EAEAEA;
             margin-top: 2rem;
         }
 
         summary {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: var(--gold-primary);
             cursor: pointer;
-            padding: 0.5rem 0;
+            padding: 0.3rem 0;
             outline: none;
         }
 
-        summary:hover {
-            color: var(--gold-hover);
-        }
-
         .policy-content {
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
             text-align: left;
             border-top: 1px solid #EAEAEA;
-            padding-top: 1.5rem;
+            padding-top: 1.2rem;
         }
 
-        .policy-content h3 {
-            margin: 1.2rem 0 0.4rem 0;
+        /* Modal Dialog for Google Play notice */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .modal-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-card h4 {
+            font-size: 1.3rem;
             color: var(--text-dark);
+            margin-bottom: 0.8rem;
         }
 
-        .policy-content p, .policy-content ul {
+        .modal-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
         }
 
-        .policy-content ul {
-            padding-left: 1.5rem;
+        .btn-modal-close {
+            background-color: var(--gold-primary);
+            color: var(--white);
+            border: none;
+            padding: 0.7rem 1.8rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-modal-close:hover {
+            background-color: var(--gold-hover);
         }
 
         /* Footer */
         footer {
-            background-color: #1A1A1A;
+            background-color: #111111;
             color: #CCCCCC;
             text-align: center;
-            padding: 2.5rem 1rem;
-            font-size: 0.9rem;
-            margin-top: 4rem;
+            padding: 2rem 1rem;
+            font-size: 0.85rem;
+            margin-top: 3rem;
         }
 
         footer a {
@@ -317,17 +449,28 @@
             text-decoration: none;
         }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
+        /* Responsive Layout Rules (Mobile & Tablet) */
+        @media (max-width: 650px) {
             header {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
+                padding: 0.8rem 1rem;
             }
-            nav a {
-                margin: 0 10px;
+
+            nav {
+                width: 100%;
+                justify-content: center;
+                gap: 15px;
+                border-top: 1px solid #F0F0F0;
+                padding-top: 8px;
+            }
+
+            .container {
+                padding: 1.8rem 1rem;
+            }
+
+            .profile-card {
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -337,77 +480,95 @@
     <!-- Header / Navbar -->
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Golden Opportunity Logo" class="logo-img">
+            <img src="logo.png" alt="Golden Opportunity AB Logo" class="logo-img">
             <a href="#" class="brand-name">GOLDEN OPPORTUNITY</a>
         </div>
         <nav>
             <a href="#app">App</a>
             <a href="#books">Books</a>
-            <a href="#about">About & Contact</a>
-            <a href="#privacy">Privacy Policy</a>
+            <a href="#about">About</a>
+            <a href="#privacy">Privacy</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Empowering Wellness & Emotional Balance</h1>
-        <p>Discover self-help tools through guided EFT Tapping and nourishing lifestyle literature designed to reduce stress and inspire vitality.</p>
+        <h1>Reduce Stress & Lower Cortisol with EFT Tapping</h1>
+        <p>Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Discover self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and wellness literature designed to restore emotional balance.</p>
     </section>
 
     <main class="container">
         
         <!-- Mobile App Section -->
         <h2 id="app" class="section-title">GO EFT Tapping App</h2>
-        <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto 4rem auto;">
+        <div class="grid" style="grid-template-columns: 1fr; max-width: 550px; margin: 0 auto 3rem auto;">
             <div class="card">
-                <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App" class="card-img" style="max-width:600px;">
+                <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App - Knackning för stress och kortisol" class="card-img">
                 <h3>GO EFT Tapping Mobile Application</h3>
-                <p>A practical self-help tool for stress management and emotional balance. Features audio-guided tapping rounds in 4 languages: English, Swedish, Arabic, and Ukrainian. Completely private with zero data retention.</p>
+                <p>An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian with zero data retention.</p>
                 
-                <div class="btn-group">
-                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
-                    <a href="YOUR_GOOGLE_PLAY_LINK" target="_blank" class="btn btn-playstore">Get it on Google Play</a>
+                <div class="store-buttons">
+                    <!-- Official Apple App Store Badge -->
+                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="store-badge" aria-label="Download on Apple App Store">
+                        <svg viewBox="0 0 384 512" fill="currentColor">
+                            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-15.2 69.5-34.3z"/>
+                        </svg>
+                        <div class="badge-text">
+                            <span class="small">Download on the</span>
+                            <span class="big">App Store</span>
+                        </div>
+                    </a>
+
+                    <!-- Official Google Play Badge (Triggers Modal Notice) -->
+                    <a href="#" onclick="openGooglePlayNotice(event)" class="store-badge" aria-label="Get it on Google Play">
+                        <svg viewBox="0 0 512 512" fill="currentColor">
+                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                        </svg>
+                        <div class="badge-text">
+                            <span class="small">GET IT ON</span>
+                            <span class="big">Google Play</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Books Section -->
-        <h2 id="books" class="section-title">Books & Literature</h2>
+        <h2 id="books" class="section-title">Books on Stress & Wellness</h2>
         <div class="grid">
             
-            <!-- Lugn i stormen Book Card -->
+            <!-- Lugn i stormen Card -->
             <div class="card">
-                <img src="eft-book.jpg" alt="Lugn i stormen Book Cover" class="card-img">
-                <h3>Lugn i stormen</h3>
-                <p>A practical self-help guide on Emotional Freedom Techniques (EFT). Learn step-by-step how to manage stress, release anxiety, and regain inner calm.</p>
-                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i%" target="_blank" class="btn btn-book">Buy on Adlibris</a>
+                <img src="eft-book.jpg" alt="Lugn i stormen av Sara Bern - Tapping och knackning för stress" class="card-img">
+                <h3>Lugn i stormen – Sara Bern</h3>
+                <p>A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to manage acute <strong>stress</strong> and lower <strong>kortisol</strong> levels.</p>
+                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="btn-book">Buy on Adlibris</a>
             </div>
 
-            <!-- Green Smoothies Book Card -->
+            <!-- Green Smoothies Card -->
             <div class="card">
-                <img src="smoothies-book.jpg" alt="Green Smoothies Book Cover" class="card-img">
-                <h3>Green Smoothies for Weight Loss & Vitality</h3>
-                <p>Explore simple, nutrient-rich green smoothie recipes to boost energy, support healthy weight management, and enhance overall wellness.</p>
-                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="btn btn-book">Buy on Adlibris</a>
+                <img src="smoothies-book.jpg" alt="Green Smoothies Book - Golden Opportunity AB" class="card-img">
+                <h3>Green Smoothies for Vitality</h3>
+                <p>Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.</p>
+                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="btn-book">Buy on Adlibris</a>
             </div>
 
         </div>
 
         <!-- About / Contact Section -->
-        <h2 id="about" class="section-title">About & Contact</h2>
+        <h2 id="about" class="section-title">About Sara Bern</h2>
         <div class="profile-card">
-            <!-- Save your uploaded photo in GitHub as 'sara-bern.jpg' -->
-            <img src="sara-bern.jpg" alt="Sara Bern" class="profile-img">
+            <img src="sara-bern.jpg" alt="Sara Bern - EFT Terapeut, Stressterapeut & Coach" class="profile-img">
             <h3>Sara Bern</h3>
-            <div class="profile-subtitle">EFT Therapist | Stress Therapist | Holistic Coach</div>
-            <p>Welcome to Golden Opportunity! I specialize in helping individuals manage stress, achieve emotional balance, and unlock personal growth through proven therapeutic methods and holistic wellness strategies.</p>
-            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn btn-linkedin">Connect on LinkedIn</a>
+            <div class="profile-subtitle">EFT Therapist | Stress Therapist | Coach</div>
+            <p>Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.</p>
+            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn-linkedin">Connect on LinkedIn</a>
         </div>
 
-        <!-- Collapsible Privacy Policy (Hidden under click menu) -->
+        <!-- Collapsible Privacy Policy -->
         <div id="privacy" class="policy-container">
             <details>
-                <summary>Privacy Policy (Click to view / Expand)</summary>
+                <summary>Privacy Policy (Click to view)</summary>
                 <div class="policy-content">
                     <p><strong>Last Updated:</strong> September 11, 2026</p>
 
@@ -436,13 +597,35 @@
 
     </main>
 
+    <!-- Modal Popup for Google Play Notice -->
+    <div id="googlePlayModal" class="modal-overlay" onclick="closeGooglePlayNotice(event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <h4>Information</h4>
+            <p>Android-appen är temporärt ur funktion. Arbete för att återställa den pågår.</p>
+            <button class="btn-modal-close" onclick="closeGooglePlayNotice(event)">OK</button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Golden Opportunity AB. All rights reserved.</p>
+        <p>&copy; 2026 Golden Opportunity AB. Founded by Sara Bern. All rights reserved.</p>
         <p style="margin-top:8px;">
-            <a href="#privacy">Privacy Policy</a> | <a href="#about">Contact</a>
+            <a href="#privacy">Privacy Policy</a> | <a href="#about">Contact Sara Bern</a>
         </p>
     </footer>
+
+    <!-- JavaScript for Modal Interactivity -->
+    <script>
+        function openGooglePlayNotice(event) {
+            event.preventDefault();
+            document.getElementById('googlePlayModal').style.display = 'flex';
+        }
+
+        function closeGooglePlayNotice(event) {
+            if (event) event.preventDefault();
+            document.getElementById('googlePlayModal').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
