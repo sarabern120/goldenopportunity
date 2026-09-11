@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Force Scroll to Top on Page Load (Overrides URL Hash) -->
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+    
     <!-- Primary SEO Meta Tags -->
     <title>Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness</title>
     <meta name="title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness">
@@ -58,6 +68,8 @@
             --gold-hover: #A3803C;
             --gold-light: #FAF6EE;
             --green-accent: #2E5A44;
+            --adlibris-blue: #002855;
+            --adlibris-red: #E3000B;
             --text-dark: #1A1A1A;
             --text-muted: #555555;
             --bg-light: #FAFAFA;
@@ -70,6 +82,10 @@
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -276,25 +292,45 @@
             letter-spacing: -0.2px;
         }
 
-        /* Book Button */
-        .btn-book {
-            display: inline-block;
+        /* Official Adlibris Button Badge */
+        .adlibris-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
             max-width: 260px;
-            padding: 0.8rem 1.2rem;
+            height: 52px;
+            background-color: var(--adlibris-blue);
+            color: #FFFFFF;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-align: center;
-            background-color: var(--white);
-            color: var(--text-dark);
-            border: 2px solid var(--gold-primary);
-            transition: all 0.2s ease;
+            padding: 0 16px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            border: 1px solid var(--adlibris-blue);
         }
 
-        .btn-book:hover {
-            background-color: var(--gold-light);
+        .adlibris-badge:hover, .adlibris-badge:active {
+            transform: translateY(-2px);
+            background-color: #001f44;
+        }
+
+        .adlibris-text {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+        }
+
+        .adlibris-text .brand {
+            color: #FFFFFF;
+        }
+
+        .adlibris-text .dot {
+            color: var(--adlibris-red);
+            font-weight: 900;
         }
 
         /* Profile Section */
@@ -449,7 +485,7 @@
             text-decoration: none;
         }
 
-        /* Responsive Layout Rules (Mobile & Tablet) */
+        /* Responsive Layout Rules */
         @media (max-width: 650px) {
             header {
                 flex-direction: column;
@@ -542,7 +578,13 @@
                 <img src="eft-book.jpg" alt="Lugn i stormen av Sara Bern - Tapping och knackning för stress" class="card-img">
                 <h3>Lugn i stormen – Sara Bern</h3>
                 <p>A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to manage acute <strong>stress</strong> and lower <strong>kortisol</strong> levels.</p>
-                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="btn-book">Buy on Adlibris</a>
+                
+                <!-- Adlibris Purchase Button Badge -->
+                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="adlibris-badge" aria-label="Köp hos Adlibris">
+                    <div class="adlibris-text">
+                        <span>Köp hos</span> <span class="brand">Adlibris</span><span class="dot">.</span>
+                    </div>
+                </a>
             </div>
 
             <!-- Green Smoothies Card -->
@@ -550,7 +592,13 @@
                 <img src="smoothies-book.jpg" alt="Green Smoothies Book - Golden Opportunity AB" class="card-img">
                 <h3>Green Smoothies for Vitality</h3>
                 <p>Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.</p>
-                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="btn-book">Buy on Adlibris</a>
+                
+                <!-- Adlibris Purchase Button Badge -->
+                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="adlibris-badge" aria-label="Köp hos Adlibris">
+                    <div class="adlibris-text">
+                        <span>Köp hos</span> <span class="brand">Adlibris</span><span class="dot">.</span>
+                    </div>
+                </a>
             </div>
 
         </div>
