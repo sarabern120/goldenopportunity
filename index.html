@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Opportunity AB – GO EFT Tapping & Wellness Books</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness</title>
+    <meta name="title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness">
+    <meta name="description" content="Sara Bern - Certified EFT Therapist, Stress Therapist & Coach at Golden Opportunity AB. Discover GO EFT Tapping app, stress reduction, cortisol control & wellness books (Lugn i stormen & Green Smoothies).">
+    <meta name="keywords" content="tapping, knackning, stress, kortisol, sara bern, Golden Opportunity, Golden Opportunity AB, EFT therapist, stress therapist, EFT tapping app, Lugn i stormen, green smoothies">
+    <meta name="author" content="Sara Bern">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / LinkedIn SEO Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sarabern120.github.io/goldenopportunity/">
+    <meta property="og:title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress & Kortisol">
+    <meta property="og:description" content="Discover GO EFT Tapping mobile app and books by Sara Bern (EFT therapist & Stress Coach). Reduce stress, manage cortisol, and find inner calm.">
+    <meta property="og:image" content="https://sarabern120.github.io/goldenopportunity/sara-bern.jpg">
+
+    <!-- Twitter SEO Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sarabern120.github.io/goldenopportunity/">
+    <meta property="twitter:title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress & Kortisol">
+    <meta property="twitter:description" content="Discover GO EFT Tapping mobile app and books by Sara Bern (EFT therapist & Stress Coach). Reduce stress, manage cortisol, and find inner calm.">
+    <meta property="twitter:image" content="https://sarabern120.github.io/goldenopportunity/sara-bern.jpg">
+
+    <!-- Schema.org Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sarabern120.github.io/goldenopportunity/#organization",
+          "name": "Golden Opportunity AB",
+          "url": "https://sarabern120.github.io/goldenopportunity/",
+          "logo": "https://sarabern120.github.io/goldenopportunity/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "Sara Bern",
+            "jobTitle": "EFT Therapist, Stress Therapist & Coach"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://sarabern120.github.io/goldenopportunity/#person",
+          "name": "Sara Bern",
+          "jobTitle": "EFT Therapist & Stress Coach",
+          "worksFor": {
+            "@id": "https://sarabern120.github.io/goldenopportunity/#organization"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/sarabern/"
+          ]
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "GO EFT Tapping",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "HealthApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
-        /* Modern CSS Variables for Design System */
         :root {
             --gold-primary: #C5A059;
             --gold-hover: #A3803C;
@@ -41,7 +106,7 @@
             align-items: center;
             position: sticky;
             top: 0;
-            z-content: 100;
+            z-index: 100;
         }
 
         .logo-container {
@@ -84,19 +149,20 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: var(--text-dark);
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
         .hero p {
             font-size: 1.15rem;
             color: var(--text-muted);
-            max-width: 650px;
+            max-width: 750px;
             margin: 0 auto 2rem auto;
         }
 
-        /* Content Sections */
+        /* Container & Titles */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -207,32 +273,99 @@
             background-color: var(--gold-light);
         }
 
-        /* Privacy Policy Container */
-        .policy-section {
+        .btn-linkedin {
+            background-color: #0A66C2;
+            color: var(--white);
+            margin-top: 1rem;
+        }
+
+        .btn-linkedin:hover {
+            background-color: #084e96;
+        }
+
+        /* Profile / Contact Section */
+        .profile-card {
             background-color: var(--white);
             border-radius: 12px;
-            padding: 2.5rem;
             border: 1px solid #EAEAEA;
-            margin-top: 3rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
-        .policy-section h2 {
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--gold-primary);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-subtitle {
+            color: var(--gold-primary);
+            font-weight: 600;
+            font-size: 1.05rem;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Collapsible Privacy Policy */
+        .policy-container {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            border: 1px solid #EAEAEA;
+            margin-top: 2rem;
+        }
+
+        summary {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gold-primary);
+            cursor: pointer;
+            padding: 0.5rem 0;
+            outline: none;
+        }
+
+        summary:hover {
+            color: var(--gold-hover);
+        }
+
+        .policy-content {
+            margin-top: 1.5rem;
+            text-align: left;
+            border-top: 1px solid #EAEAEA;
+            padding-top: 1.5rem;
+        }
+
+        .policy-content h3 {
+            margin: 1.2rem 0 0.4rem 0;
             color: var(--text-dark);
         }
 
-        .policy-section h3 {
-            margin: 1.5rem 0 0.5rem 0;
-            color: var(--text-dark);
-        }
-
-        .policy-section p, .policy-section ul {
+        .policy-content p, .policy-content ul {
             color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 1rem;
         }
 
-        .policy-section ul {
+        .policy-content ul {
             padding-left: 1.5rem;
         }
 
@@ -271,100 +404,110 @@
     <!-- Header / Navbar -->
     <header>
         <div class="logo-container">
-            <!-- Replace 'logo.png' with the path to your gold logo file -->
-            <img src="logo.png" alt="Golden Opportunity Logo" class="logo-img">
+            <img src="logo.png" alt="Golden Opportunity AB - Sara Bern Logo" class="logo-img">
             <a href="#" class="brand-name">GOLDEN OPPORTUNITY</a>
         </div>
         <nav>
             <a href="#app">App</a>
             <a href="#books">Books</a>
+            <a href="#about">About Sara Bern</a>
             <a href="#privacy">Privacy Policy</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Empowering Wellness & Emotional Balance</h1>
-        <p>Discover self-help tools through guided EFT Tapping and nourishing lifestyle literature designed to reduce stress and inspire vitality.</p>
+        <h1>Reduce Stress & Lower Cortisol with EFT Tapping</h1>
+        <p>Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Explore self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and holistic wellness books designed to regulate cortisol levels and restore emotional balance.</p>
     </section>
 
     <main class="container">
         
         <!-- Mobile App Section -->
-        <h2 id="app" class="section-title">GO EFT Tapping App</h2>
+        <h2 id="app" class="section-title">GO EFT Tapping App by Golden Opportunity</h2>
         <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto 4rem auto;">
             <div class="card">
-                <!-- Replace 'app-screenshot.png' with your App Store screenshot -->
-                <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App" class="card-img" style="max-width:280px;">
+                <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App - Knackning för stress och kortisol" class="card-img" style="max-width:280px;">
                 <h3>GO EFT Tapping Mobile Application</h3>
-                <p>A practical self-help tool for stress management and emotional balance. Features audio-guided tapping rounds in 4 languages: English, Swedish, Arabic, and Ukrainian. Completely private with zero data retention.</p>
+                <p>An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Offers guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian. Zero data retention for full user privacy.</p>
                 
                 <div class="btn-group">
-                    <!-- Put your actual App Store link below -->
-                    <a href="https://apps.apple.com/se/app/go-eft-tapping/id582597439" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
-                    <!-- Put your actual Google Play link below -->
+                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
                     <a href="YOUR_GOOGLE_PLAY_LINK" target="_blank" class="btn btn-playstore">Get it on Google Play</a>
                 </div>
             </div>
         </div>
 
         <!-- Books Section -->
-        <h2 id="books" class="section-title">Books & Literature</h2>
+        <h2 id="books" class="section-title">Books on Stress Management & Wellness</h2>
         <div class="grid">
             
-            <!-- EFT Book Card -->
+            <!-- Lugn i stormen Book Card -->
             <div class="card">
-                <!-- Replace 'eft-book.jpg' with your EFT book cover image -->
-                <img src="eft-book.jpg" alt="EFT Tapping Book Cover" class="card-img">
-                <h3>EFT & Stress Release</h3>
-                <p>A practical guide on Emotional Freedom Techniques (EFT). Learn step-by-step how to reduce anxiety, process heavy emotions, and reset your nervous system.</p>
-                <a href="#" class="btn btn-book">Order / Read More</a>
+                <img src="eft-book.jpg" alt="Lugn i stormen av Sara Bern - Tapping och knackning för stress" class="card-img">
+                <h3>Lugn i stormen – Sara Bern</h3>
+                <p>A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to effectively manage acute <strong>stress</strong>, lower elevated <strong>kortisol</strong> levels, and cultivate inner peace.</p>
+                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="btn btn-book">Buy on Adlibris</a>
             </div>
 
             <!-- Green Smoothies Book Card -->
             <div class="card">
-                <!-- Replace 'smoothies-book.jpg' with your Green Smoothies book image -->
-                <img src="smoothies-book.jpg" alt="Green Smoothies Book Cover" class="card-img">
-                <h3>Green Smoothies & Vitality</h3>
-                <p>Explore simple, nutrient-rich green smoothie recipes to boost energy, improve digestion, and support daily holistic wellness.</p>
-                <a href="#" class="btn btn-book">Order / Read More</a>
+                <img src="smoothies-book.jpg" alt="Green Smoothies Book - Golden Opportunity AB" class="card-img">
+                <h3>Green Smoothies for Weight Loss & Vitality</h3>
+                <p>Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost daily energy and vitality.</p>
+                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="btn btn-book">Buy on Adlibris</a>
             </div>
 
         </div>
 
-        <!-- Engelsk Integritetspolicy (Reaktivationskrav för Google Play) -->
-        <div id="privacy" class="policy-section">
-            <h2>Privacy Policy</h2>
-            <p><strong>Last Updated:</strong> September 11, 2026</p>
+        <!-- About / Contact Section -->
+        <h2 id="about" class="section-title">About Sara Bern & Golden Opportunity AB</h2>
+        <div class="profile-card">
+            <img src="sara-bern.jpg" alt="Sara Bern - EFT Terapeut, Stressterapeut & Coach" class="profile-img">
+            <h3>Sara Bern</h3>
+            <div class="profile-subtitle">EFT Therapist | Stress Therapist | Coach</div>
+            <p>Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and holistic coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.</p>
+            <p>Through my book <em>Lugn i stormen</em>, the <em>GO EFT Tapping app</em>, and personalized coaching, I provide practical tools to reprogram stress responses and unlock inner balance.</p>
+            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn btn-linkedin">Connect with Sara Bern on LinkedIn</a>
+        </div>
 
-            <h3>1. Data Controller</h3>
-            <p>This Mobile Application and website are operated by <strong>Golden Opportunity AB</strong>, based in Sweden.</p>
-            <p>Contact / Data Protection Lead: Sara Bern<br>Email: sara@goldenopportunity.se</p>
+        <!-- Collapsible Privacy Policy -->
+        <div id="privacy" class="policy-container">
+            <details>
+                <summary>Privacy Policy (Click to view / Expand)</summary>
+                <div class="policy-content">
+                    <p><strong>Last Updated:</strong> September 11, 2026</p>
 
-            <h3>2. Scope and Supported Languages</h3>
-            <p>This Privacy Policy applies to the GO EFT Tapping mobile application available on iOS and Android. The application interface and audio guidance support 4 languages: Swedish, English, Arabic, and Ukrainian.</p>
+                    <h3>1. Data Controller</h3>
+                    <p>This Mobile Application and website are operated by <strong>Golden Opportunity AB</strong>, based in Sweden.</p>
+                    <p>Contact / Data Protection Lead: Sara Bern<br>Email: sara@goldenopportunity.se</p>
 
-            <h3>3. Processing of Session Data (Health Data)</h3>
-            <ul>
-                <li><strong>Data Processing:</strong> During a tapping round, the app processes user spoken inputs or health assessments solely to facilitate the session.</li>
-                <li><strong>Zero-Storage Architecture:</strong> Audio data and session details remain exclusively in temporary volatile memory (RAM). <strong>All spoken data and session history are immediately deleted upon leaving or closing the app.</strong></li>
-                <li><strong>No Server Uploads:</strong> We do not record, store, or transmit your voice or personal health data to external cloud servers.</li>
-            </ul>
+                    <h3>2. Scope and Supported Languages</h3>
+                    <p>This Privacy Policy applies to the GO EFT Tapping mobile application available on iOS and Android. The application interface and audio guidance support 4 languages: Swedish, English, Arabic, and Ukrainian.</p>
 
-            <h3>4. Third-Party Sharing</h3>
-            <p>We do not collect, share, or sell user personal data, analytics, or health information to third-party advertisers or data brokers.</p>
+                    <h3>3. Processing of Session Data (Health Data)</h3>
+                    <ul>
+                        <li><strong>Data Processing:</strong> During a tapping round, the app processes user spoken inputs or health assessments solely to facilitate the session.</li>
+                        <li><strong>Zero-Storage Architecture:</strong> Audio data and session details remain exclusively in temporary volatile memory (RAM). <strong>All spoken data and session history are immediately deleted upon leaving or closing the app.</strong></li>
+                        <li><strong>No Server Uploads:</strong> We do not record, store, or transmit your voice or personal health data to external cloud servers.</li>
+                    </ul>
 
-            <h3>5. Rights Under GDPR</h3>
-            <p>Because no personal health data is saved on servers or devices after session completion, no persistent tracking takes place. European users maintain all rights under the GDPR. For inquiries, contact <a href="mailto:sara@goldenopportunity.se">sara@goldenopportunity.se</a>.</p>
+                    <h3>4. Third-Party Sharing</h3>
+                    <p>We do not collect, share, or sell user personal data, analytics, or health information to third-party advertisers or data brokers.</p>
+
+                    <h3>5. Rights Under GDPR</h3>
+                    <p>Because no personal health data is saved on servers or devices after session completion, no persistent tracking takes place. European users maintain all rights under the GDPR. For inquiries, contact <a href="mailto:sara@goldenopportunity.se">sara@goldenopportunity.se</a>.</p>
+                </div>
+            </details>
         </div>
 
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Golden Opportunity AB. All rights reserved.</p>
+        <p>&copy; 2026 Golden Opportunity AB. Founded by Sara Bern. All rights reserved.</p>
         <p style="margin-top:8px;">
-            <a href="#privacy">Privacy Policy</a> | <a href="#app">GO EFT Tapping App</a>
+            <a href="#privacy">Privacy Policy</a> | <a href="#about">Contact Sara Bern</a>
         </p>
     </footer>
 
