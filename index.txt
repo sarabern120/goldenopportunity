@@ -301,7 +301,7 @@
                 
                 <div class="btn-group">
                     <!-- Put your actual App Store link below -->
-                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
+                    <a href="https://apps.apple.com/se/app/go-eft-tapping/id582597439" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
                     <!-- Put your actual Google Play link below -->
                     <a href="YOUR_GOOGLE_PLAY_LINK" target="_blank" class="btn btn-playstore">Get it on Google Play</a>
                 </div>
