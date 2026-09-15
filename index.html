@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Favicon (Logotyp på webbläsarfliken) -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
     <!-- Primary SEO Meta Tags -->
     <title>Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness</title>
     <meta name="title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness">
-    <meta name="description" content="Sara Bern - Certified EFT Therapist, Stress Therapist & Coach at Golden Opportunity AB. Discover GO EFT Tapping app, stress reduction, cortisol control & wellness books (Lugn i stormen & Green Smoothies).">
-    <meta name="keywords" content="tapping, knackning, stress, kortisol, sara bern, Golden Opportunity, Golden Opportunity AB, EFT therapist, stress therapist, EFT tapping app, Lugn i stormen, green smoothies">
+    <meta name="description" content="Sara Bern - Certifierad EFT-terapeut, stressterapeut & coach på Golden Opportunity AB. Upptäck GO EFT Tapping-appen, stresshantering, sänkning av kortisol och böcker (Lugn i stormen & Green Smoothies).">
+    <meta name="keywords" content="tapping, knackning, stress, kortisol, sara bern, Golden Opportunity, Golden Opportunity AB, EFT terapeut, stressterapeut, EFT tapping app, Lugn i stormen, green smoothies">
     <meta name="author" content="Sara Bern">
     <meta name="robots" content="index, follow">
 
@@ -16,15 +20,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sarabern120.github.io/goldenopportunity/">
     <meta property="og:title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress & Kortisol">
-    <meta property="og:description" content="Discover GO EFT Tapping mobile app and books by Sara Bern (EFT therapist & Stress Coach). Reduce stress, manage cortisol, and find inner calm.">
+    <meta property="og:description" content="Upptäck GO EFT Tapping appen och böcker av Sara Bern (EFT-terapeut & Stressterapeut). Minska stress, reglera kortisol och hitta inre lugn.">
     <meta property="og:image" content="https://sarabern120.github.io/goldenopportunity/sara-bern.jpg">
-
-    <!-- Twitter SEO Meta Tags -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sarabern120.github.io/goldenopportunity/">
-    <meta property="twitter:title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress & Kortisol">
-    <meta property="twitter:description" content="Discover GO EFT Tapping mobile app and books by Sara Bern (EFT therapist & Stress Coach). Reduce stress, manage cortisol, and find inner calm.">
-    <meta property="twitter:image" content="https://sarabern120.github.io/goldenopportunity/sara-bern.jpg">
 
     <!-- Schema.org Structured Data for Google Search -->
     <script type="application/ld+json">
@@ -63,7 +60,7 @@
           "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD"
+            "priceCurrency": "SEK"
           }
         }
       ]
@@ -128,16 +125,35 @@
             letter-spacing: 0.5px;
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
         nav a {
             color: var(--text-dark);
             text-decoration: none;
             font-weight: 500;
-            margin-left: 20px;
+            margin-left: 15px;
             transition: color 0.2s ease;
         }
 
         nav a:hover {
             color: var(--gold-primary);
+        }
+
+        /* Language Selector Dropdown */
+        .lang-select {
+            padding: 0.35rem 0.6rem;
+            border-radius: 6px;
+            border: 1px solid var(--gold-primary);
+            background-color: var(--white);
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            outline: none;
         }
 
         /* Hero Section */
@@ -393,8 +409,9 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            nav a {
-                margin: 0 10px;
+            .nav-right {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -407,74 +424,80 @@
             <img src="logo.png" alt="Golden Opportunity AB - Sara Bern Logo" class="logo-img">
             <a href="#" class="brand-name">GOLDEN OPPORTUNITY</a>
         </div>
-        <nav>
-            <a href="#app">App</a>
-            <a href="#books">Books</a>
-            <a href="#about">About Sara Bern</a>
-            <a href="#privacy">Privacy Policy</a>
-        </nav>
+        <div class="nav-right">
+            <nav>
+                <a href="#app" id="nav-app">Appen</a>
+                <a href="#books" id="nav-books">Böcker</a>
+                <a href="#about" id="nav-about">Om Sara Bern</a>
+                <a href="#privacy" id="nav-privacy">Integritetspolicy</a>
+            </nav>
+            <select class="lang-select" onchange="changeLanguage(this.value)">
+                <option value="sv" selected>🇸🇪 Svenska</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Reduce Stress & Lower Cortisol with EFT Tapping</h1>
-        <p>Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Explore self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and holistic wellness books designed to regulate cortisol levels and restore emotional balance.</p>
+        <h1 id="hero-title">Minska stress & sänk kortisol med EFT Tapping</h1>
+        <p id="hero-desc">Välkommen till Golden Opportunity AB av <strong>Sara Bern</strong>. Upptäck självhjälpsverktyg, guidad <strong>tapping (knackning)</strong>, stresshantering och hälsoböcker för att återställa känslomässig balans.</p>
     </section>
 
     <main class="container">
         
         <!-- Mobile App Section -->
-        <h2 id="app" class="section-title">GO EFT Tapping App by Golden Opportunity</h2>
+        <h2 id="app" class="section-title"><span id="app-heading">GO EFT Tapping App av Golden Opportunity</span></h2>
         <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto 4rem auto;">
             <div class="card">
                 <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App - Knackning för stress och kortisol" class="card-img" style="max-width:280px;">
-                <h3>GO EFT Tapping Mobile Application</h3>
-                <p>An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Offers guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian. Zero data retention for full user privacy.</p>
+                <h3 id="app-title">GO EFT Tapping Mobilapplikation</h3>
+                <p id="app-desc">Ett effektivt självhjälpsverktyg som använder <strong>tapping (knackning)</strong> för att minska vardags<strong>stress</strong> och balansera <strong>kortisol</strong>nivåer. Guidade ljudsessioner på 4 språk: engelska, svenska, arabiska och ukrainska helt utan datalagring.</p>
                 
                 <div class="btn-group">
-                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="btn btn-appstore">Download on Apple App Store</a>
-                    <a href="YOUR_GOOGLE_PLAY_LINK" target="_blank" class="btn btn-playstore">Get it on Google Play</a>
+                    <a href="YOUR_APPLE_APP_STORE_LINK" target="_blank" class="btn btn-appstore" id="btn-appstore">Hämta i Apple App Store</a>
+                    <a href="YOUR_GOOGLE_PLAY_LINK" target="_blank" class="btn btn-playstore" id="btn-playstore">Ladda ned på Google Play</a>
                 </div>
             </div>
         </div>
 
         <!-- Books Section -->
-        <h2 id="books" class="section-title">Books on Stress Management & Wellness</h2>
+        <h2 id="books" class="section-title"><span id="books-heading">Böcker om stresshantering & hälsa</span></h2>
         <div class="grid">
             
             <!-- Lugn i stormen Book Card -->
             <div class="card">
                 <img src="eft-book.jpg" alt="Lugn i stormen av Sara Bern - Tapping och knackning för stress" class="card-img">
-                <h3>Lugn i stormen – Sara Bern</h3>
-                <p>A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to effectively manage acute <strong>stress</strong>, lower elevated <strong>kortisol</strong> levels, and cultivate inner peace.</p>
-                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="btn btn-book">Buy on Adlibris</a>
+                <h3 id="book1-title">Lugn i stormen – Sara Bern</h3>
+                <p id="book1-desc">En praktisk guide om Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Lär dig hantera akut <strong>stress</strong>, sänka högt <strong>kortisol</strong> och hitta inre lugn.</p>
+                <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="btn btn-book" id="btn-book1">Köp hos Adlibris</a>
             </div>
 
             <!-- Green Smoothies Book Card -->
             <div class="card">
                 <img src="smoothies-book.jpg" alt="Green Smoothies Book - Golden Opportunity AB" class="card-img">
-                <h3>Green Smoothies for Weight Loss & Vitality</h3>
-                <p>Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost daily energy and vitality.</p>
-                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="btn btn-book">Buy on Adlibris</a>
+                <h3 id="book2-title">Green Smoothies för viktminskning & vitalitet</h3>
+                <p id="book2-desc">Upptäck näringsrika recept på gröna smoothies som ger kroppen näring, stöttar din <strong>stress</strong>hantering och ökar din dagliga energi.</p>
+                <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="btn btn-book" id="btn-book2">Köp hos Adlibris</a>
             </div>
 
         </div>
 
         <!-- About / Contact Section -->
-        <h2 id="about" class="section-title">About Sara Bern & Golden Opportunity AB</h2>
+        <h2 id="about" class="section-title"><span id="about-heading">Om Sara Bern & Golden Opportunity AB</span></h2>
         <div class="profile-card">
             <img src="sara-bern.jpg" alt="Sara Bern - EFT Terapeut, Stressterapeut & Coach" class="profile-img">
             <h3>Sara Bern</h3>
-            <div class="profile-subtitle">EFT Therapist | Stress Therapist | Coach</div>
-            <p>Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and holistic coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.</p>
-            <p>Through my book <em>Lugn i stormen</em>, the <em>GO EFT Tapping app</em>, and personalized coaching, I provide practical tools to reprogram stress responses and unlock inner balance.</p>
-            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn btn-linkedin">Connect with Sara Bern on LinkedIn</a>
+            <div class="profile-subtitle" id="profile-role">EFT-terapeut | Stressterapeut | Coach</div>
+            <p id="profile-desc1">Välkommen till <strong>Golden Opportunity AB</strong>! Som certifierad EFT-terapeut (specialiserad på <strong>tapping / knackning</strong>), stressterapeut och coach hjälper jag dig att minska <strong>stress</strong> och reglera <strong>kortisol</strong> för långsiktig hälsa och vitalitet.</p>
+            <p id="profile-desc2">Genom min bok <em>Lugn i stormen</em>, <em>GO EFT Tapping-appen</em> och personlig coaching ger jag dig praktiska verktyg för att omprogrammera stressresponser.</p>
+            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn btn-linkedin" id="btn-linkedin">Kontakta Sara Bern på LinkedIn</a>
         </div>
 
         <!-- Collapsible Privacy Policy -->
         <div id="privacy" class="policy-container">
             <details>
-                <summary>Privacy Policy (Click to view / Expand)</summary>
+                <summary id="privacy-summary">Privacy Policy (Klicka för att visa / fäll ut)</summary>
                 <div class="policy-content">
                     <p><strong>Last Updated:</strong> September 11, 2026</p>
 
@@ -505,11 +528,99 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Golden Opportunity AB. Founded by Sara Bern. All rights reserved.</p>
+        <p>&copy; 2026 Golden Opportunity AB. Grundat av Sara Bern. Alla rättigheter förbehållna.</p>
         <p style="margin-top:8px;">
-            <a href="#privacy">Privacy Policy</a> | <a href="#about">Contact Sara Bern</a>
+            <a href="#privacy" id="footer-privacy">Integritetspolicy</a> | <a href="#about" id="footer-about">Kontakt Sara Bern</a>
         </p>
     </footer>
+
+    <!-- Språkväxlarskript -->
+    <script>
+        const content = {
+            sv: {
+                navApp: "Appen", navBooks: "Böcker", navAbout: "Om Sara Bern", navPrivacy: "Integritetspolicy",
+                heroTitle: "Minska stress & sänk kortisol med EFT Tapping",
+                heroDesc: "Välkommen till Golden Opportunity AB av <strong>Sara Bern</strong>. Upptäck självhjälpsverktyg, guidad <strong>tapping (knackning)</strong>, stresshantering och hälsoböcker för att återställa känslomässig balans.",
+                appHeading: "GO EFT Tapping App av Golden Opportunity",
+                appTitle: "GO EFT Tapping Mobilapplikation",
+                appDesc: "Ett effektivt självhjälpsverktyg som använder <strong>tapping (knackning)</strong> för att minska vardags<strong>stress</strong> och balansera <strong>kortisol</strong>nivåer. Guidade ljudsessioner på 4 språk: engelska, svenska, arabiska och ukrainska helt utan datalagring.",
+                btnAppstore: "Hämta i Apple App Store", btnPlaystore: "Ladda ned på Google Play",
+                booksHeading: "Böcker om stresshantering & hälsa",
+                book1Title: "Lugn i stormen – Sara Bern",
+                book1Desc: "En praktisk guide om Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Lär dig hantera akut <strong>stress</strong>, sänka högt <strong>kortisol</strong> och hitta inre lugn.",
+                btnBook1: "Köp hos Adlibris",
+                book2Title: "Green Smoothies för viktminskning & vitalitet",
+                book2Desc: "Upptäck näringsrika recept på gröna smoothies som ger kroppen näring, stöttar din <strong>stress</strong>hantering och ökar din dagliga energi.",
+                btnBook2: "Köp hos Adlibris",
+                aboutHeading: "Om Sara Bern & Golden Opportunity AB",
+                profileRole: "EFT-terapeut | Stressterapeut | Coach",
+                profileDesc1: "Välkommen till <strong>Golden Opportunity AB</strong>! Som certifierad EFT-terapeut (specialiserad på <strong>tapping / knackning</strong>), stressterapeut och coach hjälper jag dig att minska <strong>stress</strong> och reglera <strong>kortisol</strong> för långsiktig hälsa och vitalitet.",
+                profileDesc2: "Genom min bok <em>Lugn i stormen</em>, <em>GO EFT Tapping-appen</em> och personlig coaching ger jag dig praktiska verktyg för att omprogrammera stressresponser.",
+                btnLinkedin: "Kontakta Sara Bern på LinkedIn",
+                privacySummary: "Privacy Policy (Klicka för att visa / fäll ut)",
+                footerPrivacy: "Integritetspolicy", footerAbout: "Kontakt Sara Bern"
+            },
+            en: {
+                navApp: "App", navBooks: "Books", navAbout: "About Sara Bern", navPrivacy: "Privacy Policy",
+                heroTitle: "Reduce Stress & Lower Cortisol with EFT Tapping",
+                heroDesc: "Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Explore self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and holistic wellness books designed to regulate cortisol levels and restore emotional balance.",
+                appHeading: "GO EFT Tapping App by Golden Opportunity",
+                appTitle: "GO EFT Tapping Mobile Application",
+                appDesc: "An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Offers guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian. Zero data retention for full user privacy.",
+                btnAppstore: "Download on Apple App Store", btnPlaystore: "Get it on Google Play",
+                booksHeading: "Books on Stress Management & Wellness",
+                book1Title: "Lugn i stormen – Sara Bern",
+                book1Desc: "A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to effectively manage acute <strong>stress</strong>, lower elevated <strong>kortisol</strong> levels, and cultivate inner peace.",
+                btnBook1: "Buy on Adlibris",
+                book2Title: "Green Smoothies for Weight Loss & Vitality",
+                book2Desc: "Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost daily energy and vitality.",
+                btnBook2: "Buy on Adlibris",
+                aboutHeading: "About Sara Bern & Golden Opportunity AB",
+                profileRole: "EFT Therapist | Stress Therapist | Coach",
+                profileDesc1: "Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and holistic coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.",
+                profileDesc2: "Through my book <em>Lugn i stormen</em>, the <em>GO EFT Tapping app</em>, and personalized coaching, I provide practical tools to reprogram stress responses and unlock inner balance.",
+                btnLinkedin: "Connect with Sara Bern on LinkedIn",
+                privacySummary: "Privacy Policy (Click to view / Expand)",
+                footerPrivacy: "Privacy Policy", footerAbout: "Contact Sara Bern"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const l = content[lang];
+            document.getElementById('nav-app').textContent = l.navApp;
+            document.getElementById('nav-books').textContent = l.navBooks;
+            document.getElementById('nav-about').textContent = l.navAbout;
+            document.getElementById('nav-privacy').textContent = l.navPrivacy;
+
+            document.getElementById('hero-title').innerHTML = l.heroTitle;
+            document.getElementById('hero-desc').innerHTML = l.heroDesc;
+
+            document.getElementById('app-heading').innerHTML = l.appHeading;
+            document.getElementById('app-title').innerHTML = l.appTitle;
+            document.getElementById('app-desc').innerHTML = l.appDesc;
+            document.getElementById('btn-appstore').textContent = l.btnAppstore;
+            document.getElementById('btn-playstore').textContent = l.btnPlaystore;
+
+            document.getElementById('books-heading').innerHTML = l.booksHeading;
+            document.getElementById('book1-title').innerHTML = l.book1Title;
+            document.getElementById('book1-desc').innerHTML = l.book1Desc;
+            document.getElementById('btn-book1').textContent = l.btnBook1;
+
+            document.getElementById('book2-title').innerHTML = l.book2Title;
+            document.getElementById('book2-desc').innerHTML = l.book2Desc;
+            document.getElementById('btn-book2').textContent = l.btnBook2;
+
+            document.getElementById('about-heading').innerHTML = l.aboutHeading;
+            document.getElementById('profile-role').innerHTML = l.profileRole;
+            document.getElementById('profile-desc1').innerHTML = l.profileDesc1;
+            document.getElementById('profile-desc2').innerHTML = l.profileDesc2;
+            document.getElementById('btn-linkedin').textContent = l.btnLinkedin;
+
+            document.getElementById('privacy-summary').textContent = l.privacySummary;
+            document.getElementById('footer-privacy').textContent = l.footerPrivacy;
+            document.getElementById('footer-about').textContent = l.footerAbout;
+        }
+    </script>
 
 </body>
 </html>
