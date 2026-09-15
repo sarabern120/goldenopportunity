@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon (Enbart den cirkulära symbolen utan hopklämning) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
@@ -21,8 +21,8 @@
     <!-- Primary SEO Meta Tags -->
     <title>Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness</title>
     <meta name="title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress, Kortisol & Wellness">
-    <meta name="description" content="Sara Bern - Certified EFT Therapist, Stress Therapist & Coach at Golden Opportunity AB. Discover GO EFT Tapping app, stress reduction, cortisol control & wellness books (Lugn i stormen & Green Smoothies).">
-    <meta name="keywords" content="tapping, knackning, stress, kortisol, sara bern, Golden Opportunity, Golden Opportunity AB, EFT therapist, stress therapist, EFT tapping app, Lugn i stormen, green smoothies">
+    <meta name="description" content="Sara Bern - Författare, IT-konsult och Stressterapeut på Golden Opportunity AB. Upptäck GO EFT Tapping-appen, stresshantering och böcker (Lugn i stormen & Green Smoothies).">
+    <meta name="keywords" content="tapping, knackning, stress, kortisol, sara bern, Golden Opportunity, Golden Opportunity AB, författare, IT konsult, stressterapeut, EFT tapping app, Lugn i stormen, green smoothies">
     <meta name="author" content="Sara Bern">
     <meta name="robots" content="index, follow">
 
@@ -30,7 +30,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sarabern120.github.io/goldenopportunity/">
     <meta property="og:title" content="Golden Opportunity AB – Sara Bern | EFT Tapping, Stress & Kortisol">
-    <meta property="og:description" content="Discover GO EFT Tapping mobile app and books by Sara Bern (EFT therapist & Stress Coach). Reduce stress, manage cortisol, and find inner calm.">
+    <meta property="og:description" content="Upptäck GO EFT Tapping appen och böcker av Sara Bern (Författare, IT-konsult & Stressterapeut). Minska stress, reglera kortisol och hitta inre lugn.">
     <meta property="og:image" content="https://sarabern120.github.io/goldenopportunity/sara-bern.jpg">
 
     <!-- Schema.org Structured Data -->
@@ -47,14 +47,14 @@
           "founder": {
             "@type": "Person",
             "name": "Sara Bern",
-            "jobTitle": "EFT Therapist, Stress Therapist & Coach"
+            "jobTitle": "Författare, IT-konsult & Stressterapeut"
           }
         },
         {
           "@type": "Person",
           "@id": "https://sarabern120.github.io/goldenopportunity/#person",
           "name": "Sara Bern",
-          "jobTitle": "EFT Therapist & Stress Coach",
+          "jobTitle": "Författare, IT-konsult & Stressterapeut",
           "worksFor": {
             "@id": "https://sarabern120.github.io/goldenopportunity/#organization"
           },
@@ -146,7 +146,6 @@
             color: var(--gold-primary);
         }
 
-        /* Language Selector with Flag Emojis */
         .lang-select {
             padding: 0.4rem 0.7rem;
             border-radius: 8px;
@@ -253,7 +252,7 @@
             flex-grow: 1;
         }
 
-        /* Official Store Buttons Layout */
+        /* Store Buttons */
         .store-buttons {
             display: flex;
             flex-direction: column;
@@ -321,7 +320,6 @@
             letter-spacing: -0.2px;
         }
 
-        /* Official Adlibris Button Badge */
         .adlibris-badge {
             display: inline-flex;
             align-items: center;
@@ -367,11 +365,19 @@
             background-color: var(--white);
             border-radius: 12px;
             border: 1px solid #EAEAEA;
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            max-width: 700px;
+            padding: 2.5rem 1.8rem;
+            text-align: left;
+            max-width: 750px;
             margin: 0 auto 3rem auto;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
         .profile-img {
@@ -385,17 +391,33 @@
         }
 
         .profile-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.4rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.3rem;
         }
 
         .profile-subtitle {
             color: var(--gold-primary);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 1rem;
             margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .profile-text p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 1.1rem;
+            line-height: 1.65;
+        }
+
+        body[dir="rtl"] .profile-text {
+            text-align: right;
+        }
+
+        .profile-actions {
+            text-align: center;
+            margin-top: 1.5rem;
         }
 
         .btn-linkedin {
@@ -407,7 +429,6 @@
             font-size: 0.95rem;
             background-color: #0A66C2;
             color: var(--white);
-            margin-top: 0.5rem;
             transition: background-color 0.2s ease;
         }
 
@@ -444,7 +465,7 @@
             text-align: right;
         }
 
-        /* Modal Dialog for Google Play notice */
+        /* Modal Dialog */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -518,7 +539,6 @@
             text-decoration: none;
         }
 
-        /* Responsive Layout Rules */
         @media (max-width: 650px) {
             header {
                 flex-direction: column;
@@ -538,7 +558,7 @@
             }
 
             .profile-card {
-                padding: 2rem 1rem;
+                padding: 2rem 1.2rem;
             }
         }
     </style>
@@ -562,8 +582,8 @@
             
             <!-- Language Dropdown Menu -->
             <select class="lang-select" onchange="changeLanguage(this.value)">
-                <option value="en" selected>🇬🇧 English</option>
-                <option value="sv">🇸🇪 Svenska</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="sv" selected>🇸🇪 Svenska</option>
                 <option value="ar">🇦🇪 العربية</option>
                 <option value="uk">🇺🇦 Українська</option>
             </select>
@@ -572,8 +592,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1 id="hero-title">Reduce Stress & Lower Cortisol with EFT Tapping</h1>
-        <p id="hero-desc">Welcome to Golden Opportunity AB by <strong>Sara Bern</strong>. Discover self-help tools, guided <strong>tapping (knackning)</strong>, stress management techniques, and wellness literature designed to restore emotional balance.</p>
+        <h1 id="hero-title">Minska stress & sänk kortisol med EFT Tapping</h1>
+        <p id="hero-desc">Välkommen till Golden Opportunity AB av <strong>Sara Bern</strong>. Upptäck självhjälpsverktyg, guidad <strong>tapping (knackning)</strong>, stresshantering och hälsoböcker för att återställa känslomässig balans.</p>
     </section>
 
     <main class="container">
@@ -583,8 +603,8 @@
         <div class="grid" style="grid-template-columns: 1fr; max-width: 550px; margin: 0 auto 3rem auto;">
             <div class="card">
                 <img src="app-screenshot.png" alt="GO EFT Tapping Mobile App - Knackning för stress och kortisol" class="card-img">
-                <h3 id="app-title">GO EFT Tapping Mobile Application</h3>
-                <p id="app-desc">An effective self-help tool utilizing <strong>tapping (knackning)</strong> to combat everyday <strong>stress</strong> and balance <strong>kortisol</strong> (cortisol) levels. Guided audio sessions in 4 languages: English, Swedish, Arabic, and Ukrainian with zero data retention.</p>
+                <h3 id="app-title">GO EFT Tapping Mobilapplikation</h3>
+                <p id="app-desc">Ett effektivt självhjälpsverktyg som använder <strong>tapping (knackning)</strong> för att minska vardags<strong>stress</strong> och balansera <strong>kortisol</strong>nivåer. Guidade ljudsessioner på 4 språk: engelska, svenska, arabiska och ukrainska helt utan datalagring.</p>
                 
                 <div class="store-buttons">
                     <!-- Apple App Store Badge -->
@@ -593,7 +613,7 @@
                             <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-15.2 69.5-34.3z"/>
                         </svg>
                         <div class="badge-text">
-                            <span class="small" id="badge-appstore-sub">Download on the</span>
+                            <span class="small" id="badge-appstore-sub">Ladda ned på</span>
                             <span class="big">App Store</span>
                         </div>
                     </a>
@@ -604,7 +624,7 @@
                             <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
                         </svg>
                         <div class="badge-text">
-                            <span class="small">GET IT ON</span>
+                            <span class="small">LADDA NED PÅ</span>
                             <span class="big">Google Play</span>
                         </div>
                     </a>
@@ -613,18 +633,18 @@
         </div>
 
         <!-- Books Section -->
-        <h2 id="books" class="section-title"><span id="books-heading">Books on Stress & Wellness</span></h2>
+        <h2 id="books" class="section-title"><span id="books-heading">Böcker om stress & hälsa</span></h2>
         <div class="grid">
             
             <!-- Lugn i stormen Card -->
             <div class="card">
                 <img src="eft-book.jpg" alt="Lugn i stormen av Sara Bern - Tapping och knackning för stress" class="card-img">
                 <h3 id="book1-title">Lugn i stormen – Sara Bern</h3>
-                <p id="book1-desc">A step-by-step guide on Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Learn how to manage acute <strong>stress</strong> and lower <strong>kortisol</strong> levels.</p>
+                <p id="book1-desc">En praktisk guide om Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Lär dig hantera akut <strong>stress</strong> och sänka högt <strong>kortisol</strong>.</p>
                 
                 <a href="https://www.adlibris.com/sv/sok?q=sara%20bern%20lugn%20i" target="_blank" class="adlibris-badge" aria-label="Köp hos Adlibris">
                     <div class="adlibris-text">
-                        <span id="buy-book1">Buy at</span> <span class="brand">Adlibris</span><span class="dot">.</span>
+                        <span id="buy-book1">Köp hos</span> <span class="brand">Adlibris</span><span class="dot">.</span>
                     </div>
                 </a>
             </div>
@@ -632,12 +652,12 @@
             <!-- Green Smoothies Card -->
             <div class="card">
                 <img src="smoothies-book.jpg" alt="Green Smoothies Book - Golden Opportunity AB" class="card-img">
-                <h3 id="book2-title">Green Smoothies for Vitality</h3>
-                <p id="book2-desc">Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.</p>
+                <h3 id="book2-title">Green Smoothies för vitalitet</h3>
+                <p id="book2-desc">Upptäck näringsrika recept på gröna smoothies som ger kroppen näring, stöttar din <strong>stress</strong>hantering och ökar din energi.</p>
                 
                 <a href="https://www.adlibris.com/sv/bok/green-smoothies-weight-loss-recipes-9789198187205" target="_blank" class="adlibris-badge" aria-label="Köp hos Adlibris">
                     <div class="adlibris-text">
-                        <span id="buy-book2">Buy at</span> <span class="brand">Adlibris</span><span class="dot">.</span>
+                        <span id="buy-book2">Köp hos</span> <span class="brand">Adlibris</span><span class="dot">.</span>
                     </div>
                 </a>
             </div>
@@ -645,19 +665,33 @@
         </div>
 
         <!-- About / Contact Section -->
-        <h2 id="about" class="section-title"><span id="about-heading">About Sara Bern</span></h2>
+        <h2 id="about" class="section-title"><span id="about-heading">Om Sara Bern</span></h2>
         <div class="profile-card">
-            <img src="sara-bern.jpg" alt="Sara Bern - EFT Terapeut, Stressterapeut & Coach" class="profile-img">
-            <h3>Sara Bern</h3>
-            <div class="profile-subtitle" id="profile-role">EFT Therapist | Stress Therapist | Coach</div>
-            <p id="profile-desc">Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.</p>
-            <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn-linkedin" id="linkedin-btn">Connect on LinkedIn</a>
+            <div class="profile-header">
+                <img src="sara-bern.jpg" alt="Sara Bern - Författare, IT-konsult & Stressterapeut" class="profile-img">
+                <h3>Sara Bern</h3>
+                <div class="profile-subtitle" id="profile-role">Författare | IT konsult | Stress-terapeut</div>
+            </div>
+            
+            <div class="profile-text" id="profile-desc">
+                <p>Som certifierad EFT-terapeut (specialiserad på tapping / knackning), stressterapeut och coach har jag hjälpt många människor att minska stress och reglera kortisol för långsiktig hälsa och välmående.</p>
+                <p>Sara Bern är styrelsemedlem i EFT förbundet - Yrkesförbundet för EFT och knacknings-metoder. Hon är certifierad advanced EFT practitioner hos AAMET och AMT, hon är certifierad BSFF practitioner och EmoTrance practitioner.</p>
+                <p>Utöver detta har hon en civilingenjörsutbildning i Datateknik och Ekonomi. Därtill har hon på egen hand tillägnat sig mycket kunskap inom stress- och smärtforskning, epigenetik, biovetenskap såväl som neurovetenskap.</p>
+                <p>Detta sammantaget bidrar till hennes möjlighet att lära ut EFT på ett pedagogiskt och förtroendeingivande sätt, också för manliga tekniker och andra skeptiker.</p>
+                <p>Sara har jobbat med EFT för många olika yrkeskategorier, chefer, agila utvecklingsteam på Cybercom, ingenjörer, lärare, läkare och entreprenörer, VDs för att nämna några.</p>
+                <p>Hon har verkat som Agil coach och Executive’s Global Networks mötesledare inom IT världen. Numera Produktägare på Strikersoft. Hon fortsätter föra in EFT i affärsvardagen som ett av många verktyg.</p>
+                <p>När hon beviljades Vinnovamedel för att undersöka möjligheten att införa sin iPhone-app GO EFT Tapping för stressreducering i svensk sjukvård, blev Strikersoft mitt val av partner, de delade både mina värderingar och långsiktighet. Strikersoft bad mig stanna och jag verkar idag som produktägare för eHälsa-plattformen SwipeCare och som Key Account Manager för flera av våra agila utvecklingsteam.</p>
+            </div>
+
+            <div class="profile-actions">
+                <a href="https://www.linkedin.com/in/sarabern/" target="_blank" class="btn-linkedin" id="linkedin-btn">Kontakta på LinkedIn</a>
+            </div>
         </div>
 
         <!-- Collapsible Privacy Policy -->
         <div id="privacy" class="policy-container">
             <details>
-                <summary id="privacy-summary">Privacy Policy (Click to view)</summary>
+                <summary id="privacy-summary">Integritetspolicy (Klicka för att visa)</summary>
                 <div class="policy-content" id="privacy-body">
                     <p><strong>Last Updated:</strong> September 11, 2026</p>
 
@@ -703,6 +737,37 @@
     <!-- Multilingual Dictionary & Switcher Script -->
     <script>
         const translations = {
+            sv: {
+                navApp: "Appen", navBooks: "Böcker", navAbout: "Om mig", navPrivacy: "Integritetspolicy",
+                heroTitle: "Minska stress & sänk kortisol med EFT Tapping",
+                heroDesc: "Välkommen till Golden Opportunity AB av <strong>Sara Bern</strong>. Upptäck självhjälpsverktyg, guidad <strong>tapping (knackning)</strong>, stresshantering och hälsoböcker för att återställa känslomässig balans.",
+                appHeading: "GO EFT Tapping App",
+                appTitle: "GO EFT Tapping Mobilapplikation",
+                appDesc: "Ett effektivt självhjälpsverktyg som använder <strong>tapping (knackning)</strong> för att minska vardags<strong>stress</strong> och balansera <strong>kortisol</strong>nivåer. Guidade ljudsessioner på 4 språk: engelska, svenska, arabiska och ukrainska helt utan datalagring.",
+                badgeAppStoreSub: "Ladda ned på",
+                booksHeading: "Böcker om stress & hälsa",
+                book1Title: "Lugn i stormen – Sara Bern",
+                book1Desc: "En praktisk guide om Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Lär dig hantera akut <strong>stress</strong> och sänka högt <strong>kortisol</strong>.",
+                buyBook1: "Köp hos",
+                book2Title: "Green Smoothies för vitalitet",
+                book2Desc: "Upptäck näringsrika recept på gröna smoothies som ger kroppen näring, stöttar din <strong>stress</strong>hantering och ökar din energi.",
+                buyBook2: "Köp hos",
+                aboutHeading: "Om Sara Bern",
+                profileRole: "Författare | IT konsult | Stress-terapeut",
+                profileDesc: `
+                    <p>Som certifierad EFT-terapeut (specialiserad på tapping / knackning), stressterapeut och coach har jag hjälpt många människor att minska stress och reglera kortisol för långsiktig hälsa och välmående.</p>
+                    <p>Sara Bern är styrelsemedlem i EFT förbundet - Yrkesförbundet för EFT och knacknings-metoder. Hon är certifierad advanced EFT practitioner hos AAMET och AMT, hon är certifierad BSFF practitioner och EmoTrance practitioner.</p>
+                    <p>Utöver detta har hon en civilingenjörsutbildning i Datateknik och Ekonomi. Därtill har hon på egen hand tillägnat sig mycket kunskap inom stress- och smärtforskning, epigenetik, biovetenskap såväl som neurovetenskap.</p>
+                    <p>Detta sammantaget bidrar till hennes möjlighet att lära ut EFT på ett pedagogiskt och förtroendeingivande sätt, också för manliga tekniker och andra skeptiker.</p>
+                    <p>Sara har jobbat med EFT för många olika yrkeskategorier, chefer, agila utvecklingsteam på Cybercom, ingenjörer, lärare, läkare och entreprenörer, VDs för att nämna några.</p>
+                    <p>Hon har verkat som Agil coach och Executive’s Global Networks mötesledare inom IT världen. Numera Produktägare på Strikersoft. Hon fortsätter föra in EFT i affärsvardagen som ett av många verktyg.</p>
+                    <p>När hon beviljades Vinnovamedel för att undersöka möjligheten att införa sin iPhone-app GO EFT Tapping för stressreducering i svensk sjukvård, blev Strikersoft mitt val av partner, de delade både mina värderingar och långsiktighet. Strikersoft bad mig stanna och jag verkar idag som produktägare för eHälsa-plattformen SwipeCare och som Key Account Manager för flera av våra agila utvecklingsteam.</p>
+                `,
+                linkedinBtn: "Kontakta på LinkedIn",
+                privacySummary: "Integritetspolicy (Klicka för att visa)",
+                modalTitle: "Information",
+                modalMsg: "Android-appen är temporärt ur funktion. Arbete för att återställa den pågår."
+            },
             en: {
                 navApp: "App", navBooks: "Books", navAbout: "About", navPrivacy: "Privacy",
                 heroTitle: "Reduce Stress & Lower Cortisol with EFT Tapping",
@@ -719,54 +784,45 @@
                 book2Desc: "Discover nutrient-dense green smoothie recipes that nourish your body, complement your <strong>stress</strong> management routine, and boost vitality.",
                 buyBook2: "Buy at",
                 aboutHeading: "About Sara Bern",
-                profileRole: "EFT Therapist | Stress Therapist | Coach",
-                profileDesc: "Welcome to <strong>Golden Opportunity AB</strong>! As a certified EFT therapist (specializing in <strong>tapping / knackning</strong>), stress therapist, and coach, I help individuals master <strong>stress</strong> reduction and regulate <strong>kortisol</strong> for long-term health and vitality.",
+                profileRole: "Author | IT Consultant | Stress Therapist",
+                profileDesc: `
+                    <p>As a certified EFT therapist (specializing in tapping), stress therapist, and coach, I have helped many people reduce stress and regulate cortisol levels for long-term health and well-being.</p>
+                    <p>Sara Bern is a board member of the Swedish EFT Association. She is a certified Advanced EFT Practitioner with AAMET and AMT, as well as a certified BSFF Practitioner and EmoTrance Practitioner.</p>
+                    <p>In addition, she holds a Master of Science degree in Computer Science and Economics. She has also acquired extensive knowledge in stress and pain research, epigenetics, bioscience, and neuroscience.</p>
+
+                    <p>This combined background enables her to teach EFT in a clear, accessible, and trustworthy manner, including for technical professionals and skeptics.</p>
+                    <p>Sara has worked with EFT across various professional sectors—executives, agile engineering teams at Cybercom, teachers, doctors, entrepreneurs, and CEOs, to name a few.</p>
+                    <p>She has served as an Agile Coach and EGN meeting leader in the IT industry, and is currently a Product Owner at Strikersoft, continuing to introduce EFT into business routines as a practical tool.</p>
+                    <p>When awarded Vinnova funding to explore implementing her GO EFT Tapping iPhone app in Swedish healthcare, Strikersoft became her chosen partner due to shared values and long-term vision. Today, she serves as Product Owner for the eHealth platform SwipeCare and Key Account Manager for agile development teams.</p>
+                `,
                 linkedinBtn: "Connect on LinkedIn",
                 privacySummary: "Privacy Policy (Click to view)",
                 modalTitle: "Information",
                 modalMsg: "The Android app is temporarily unavailable. Work is underway to restore it."
             },
-            sv: {
-                navApp: "App", navBooks: "Böcker", navAbout: "Om mig", navPrivacy: "Integritetspolicy",
-                heroTitle: "Minska stress & sänk kortisol med EFT Tapping",
-                heroDesc: "Välkommen till Golden Opportunity AB av <strong>Sara Bern</strong>. Upptäck självhjälpsverktyg, guidad <strong>tapping (knackning)</strong>, stresshantering och hälsoböcker för att återställa känslomässig balans.",
-                appHeading: "GO EFT Tapping App",
-                appTitle: "GO EFT Tapping Mobilapplikation",
-                appDesc: "Ett effektivt självhjälpsverktyg som använder <strong>tapping (knackning)</strong> för att minska vardags<strong>stress</strong> och balansera <strong>kortisol</strong>nivåer. Guidade ljudsessioner på 4 språk: engelska, svenska, arabiska och ukrainska helt utan datalagring.",
-                badgeAppStoreSub: "Ladda ned på",
-                booksHeading: "Böcker om stress & hälsa",
-                book1Title: "Lugn i stormen – Sara Bern",
-                book1Desc: "En praktisk guide om Emotional Freedom Techniques (EFT / <strong>knackning</strong>). Lär dig hantera akut <strong>stress</strong> och sänka högt <strong>kortisol</strong>.",
-                buyBook1: "Köp hos",
-                book2Title: "Green Smoothies för vitalitet",
-                book2Desc: "Upptäck näringsrika recept på gröna smoothies som ger kroppen näring, stöttar din <strong>stress</strong>hantering och ökar din energi.",
-                buyBook2: "Köp hos",
-                aboutHeading: "Om Sara Bern",
-                profileRole: "EFT-terapeut | Stressterapeut | Coach",
-                profileDesc: "Välkommen till <strong>Golden Opportunity AB</strong>! Som certifierad EFT-terapeut (specialiserad på <strong>tapping / knackning</strong>), stressterapeut och coach hjälper jag dig att minska <strong>stress</strong> och reglera <strong>kortisol</strong> för långsiktig hälsa och välmående.",
-                linkedinBtn: "Kontakta på LinkedIn",
-                privacySummary: "Integritetspolicy (Klicka för att visa)",
-                modalTitle: "Information",
-                modalMsg: "Android-appen är temporärt ur funktion. Arbete för att återställa den pågår."
-            },
             ar: {
                 navApp: "التطبيق", navBooks: "الكتب", navAbout: "عن الكاتبة", navPrivacy: "الخصوصية",
                 heroTitle: "تقليل التوتر وخفض الكورتيزول باستخدام تقنية EFT Tapping",
-                heroDesc: "مرحبًا بكم في Golden Opportunity AB بقلم <strong>سارة بيرن</strong>. اكتشف أدوات المساعدة الذاتية، وجلسات <strong>النقر (Tapping)</strong> الموجهة، وتقنيات إدارة التوتر كتب الصحة والرفاهية.",
+                heroDesc: "مرحبًا بكم في Golden Opportunity AB بقلم <strong>سارة بيرن</strong>. اكتشف أدوات المساعدة الذاتية، وجلسات <strong>النقر (Tapping)</strong> الموجهة، وتقنيات إدارة التوتر والكتب.",
                 appHeading: "تطبيق GO EFT Tapping",
                 appTitle: "تطبيق GO EFT Tapping للموبايل",
-                appDesc: "أداة فعالة للمساعدة الذاتية تستخدم <strong>النقر (Tapping)</strong> لمكافحة <strong>التوتر</strong> اليومي وموازنة مستويات <strong>الكورتيزول</strong>. جلسات صوتية موجهة بـ 4 لغات: الإنجليزية، السويدية، العربية، والأوكرانية بدون احتفاظ بالبيانات.",
+                appDesc: "أداة فعالة للمساعدة الذاتية تستخدم <strong>النقر (Tapping)</strong> لمكافحة <strong>التوتر</strong> وموازنة مستويات <strong>الكورتيزول</strong>. جلسات صوتية موجهة بـ 4 لغات بدون احتفاظ بالبيانات.",
                 badgeAppStoreSub: "تنزيل من",
                 booksHeading: "كتب عن التوتر والصحة",
                 book1Title: "الهدوء في العاصفة – سارة بيرن",
-                book1Desc: "دليل خطوة بخطوة حول تقنيات الحرية النفسية (EFT / <strong>النقر</strong>). تعلم كيفية إدارة <strong>التوتر</strong> الحاد وخفض مستويات <strong>الكورتيزول</strong>.",
+                book1Desc: "دليل خطوة بخطوة حول تقنيات الحرية النفسية (EFT). تعلم كيفية إدارة <strong>التوتر</strong> وخفض مستويات <strong>الكورتيزول</strong>.",
                 buyBook1: "شراء من",
                 book2Title: "العصائر الخضراء للحيوية",
                 book2Desc: "اكتشف وصفات العصائر الخضراء الغنية بالمغذيات التي تغذي جسمك وتدعم روتين إدارة <strong>التوتر</strong> وتزيد من الحيوية.",
                 buyBook2: "شراء من",
                 aboutHeading: "عن سارة بيرن",
-                profileRole: "معالجة EFT | معالجة توتر | مدربة",
-                profileDesc: "مرحبًا بكم في <strong>Golden Opportunity AB</strong>! بصفتي معالجة EFT معتمدة (متخصصة في <strong>النقر / Tapping</strong>)، ومعالجة توتر ومدربة، أساعد الأفراد على إتقان تقليل <strong>التوتر</strong> وتنظيم <strong>الكورتيزول</strong> للحصول على صحة وحيوية طويلة الأمد.",
+                profileRole: "كاتبة | مستشارة تكنولوجيا المعلومات | معالجة توتر",
+                profileDesc: `
+                    <p>بصفتي معالجة EFT معتمدة ومتخصصة في إدارة التوتر، ساعدت العديد من الأشخاص على تقليل التوتر وتنظيم مستويات الكورتيزول للحصول على صحة وحيوية طويلة الأمد.</p>
+
+                    <p>سارة بيرن عضوة في مجلس إدارة جمعية EFT السويدية، وحاصلة على شهادة ممارس متقدم في EFT بالإضافة إلى شهادات في BSFF و EmoTrance.</p>
+                    <p>بالإضافة إلى ذلك، تملك درجة الماجستير في الهندسة والعلوم الاقتصادية، وتتمتع بخبرة واسعة في أبحاث التوتر والعلوم العصبيّة.</p>
+                `,
                 linkedinBtn: "تواصل عبر LinkedIn",
                 privacySummary: "سياسة الخصوصية (انقر للعرض)",
                 modalTitle: "معلومات",
@@ -775,21 +831,25 @@
             uk: {
                 navApp: "Додаток", navBooks: "Книги", navAbout: "Про мене", navPrivacy: "Конфіденційність",
                 heroTitle: "Зменшуйте стрес та знижуйте кортизол за допомогою EFT Tapping",
-                heroDesc: "Ласкаво просимо до Golden Opportunity AB від <strong>Сари Берн</strong>. Відкрийте для себе інструменти самодопомоги, кероване <strong>простукування (Tapping)</strong>, техніки управління стресом та літературу для відновлення емоційного балансу.",
+                heroDesc: "Ласкаво просимо до Golden Opportunity AB від <strong>Сари Берн</strong>. Відкрийте для себе інструменти самодопомоги, кероване <strong>простукування (Tapping)</strong> та літературу для емоційного балансу.",
                 appHeading: "Додаток GO EFT Tapping",
                 appTitle: "Мобільний додаток GO EFT Tapping",
-                appDesc: "Ефективний інструмент самодопомоги з використанням <strong>простукування (Tapping)</strong> для боротьби зі щоденним <strong>стресом</strong> та балансування рівня <strong>кортизолу</strong>. Аудіосесії 4 мовами: англійською, шведською, арабською та українською без збереження даних.",
+                appDesc: "Ефективний інструмент самодопомоги з використанням <strong>простукування (Tapping)</strong> для боротьби зі <strong>стресом</strong> та балансування <strong>кортизолу</strong>. Аудіосесії 4 мовами без збереження даних.",
                 badgeAppStoreSub: "Завантажити в",
                 booksHeading: "Книги про стрес та здоров'я",
                 book1Title: "Спокій у шторм – Сара Берн",
-                book1Desc: "Покроковий посібник з технік емоційного звільнення (EFT / <strong>простукування</strong>). Дізнайтеся, як керувати гострим <strong>стресом</strong> та знижувати рівень <strong>кортизолу</strong>.",
+                book1Desc: "Покроковий посібник з технік емоційного звільнення (EFT). Дізнайтеся, як керувати <strong>стресом</strong> та знижувати рівень <strong>кортизолу</strong>.",
                 buyBook1: "Купити на",
                 book2Title: "Зелені смузі для життєвої сили",
-                book2Desc: "Відкрийте для себе рецепти поживних зелених смузі, які живлять ваше тіло, доповнюють рутину управління <strong>стресом</strong> та підвищують енергію.",
+                book2Desc: "Відкрийте для себе рецепти поживних зелених смузі, які живлять ваше тіло та підвищують енергію.",
                 buyBook2: "Купити на",
                 aboutHeading: "Про Сару Берн",
-                profileRole: "EFT-терапевт | Терапевт зі стресу | Коуч",
-                profileDesc: "Ласкаво просимо до <strong>Golden Opportunity AB</strong>! Як сертифікований EFT-терапевт (спеціалізуюся на <strong>простукуванні / Tapping</strong>), терапевт зі стресу та коуч, я допомагаю зменшити <strong>стрес</strong> та врегулювати <strong>кортизол</strong> для тривалого здоров'я та життєвої сили.",
+                profileRole: "Авторка | IT-консультант | Терапевт зі стресу",
+                profileDesc: `
+                    <p>Як сертифікований EFT-терапевт, терапевт зі стресу та коуч, я допомогла багатьом людям зменшити стрес та врегулювати рівень кортизолу для тривалого здоров'я та життєвої сили.</p>
+
+                    <p>Сара Берн є членом правління Шведської асоціації EFT. Вона має вищу інженерно-економічну освіту та глибокі знання у сфері нейронауки та досліджень стресу.</p>
+                `,
                 linkedinBtn: "Зв'язатися в LinkedIn",
                 privacySummary: "Політика конфіденційності (Натисніть для перегляду)",
                 modalTitle: "Інформація",
@@ -798,28 +858,23 @@
         };
 
         function changeLanguage(lang) {
-            const t = translations[lang] || translations.en;
+            const t = translations[lang] || translations.sv;
             
-            // Set Text Direction (RTL for Arabic)
             document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
-            // Header Nav
             document.getElementById('nav-app').textContent = t.navApp;
             document.getElementById('nav-books').textContent = t.navBooks;
             document.getElementById('nav-about').textContent = t.navAbout;
             document.getElementById('nav-privacy').textContent = t.navPrivacy;
 
-            // Hero
             document.getElementById('hero-title').innerHTML = t.heroTitle;
             document.getElementById('hero-desc').innerHTML = t.heroDesc;
 
-            // App Section
             document.getElementById('app-heading').innerHTML = t.appHeading;
             document.getElementById('app-title').innerHTML = t.appTitle;
             document.getElementById('app-desc').innerHTML = t.appDesc;
             document.getElementById('badge-appstore-sub').textContent = t.badgeAppStoreSub;
 
-            // Books Section
             document.getElementById('books-heading').innerHTML = t.booksHeading;
             document.getElementById('book1-title').innerHTML = t.book1Title;
             document.getElementById('book1-desc').innerHTML = t.book1Desc;
@@ -829,13 +884,11 @@
             document.getElementById('book2-desc').innerHTML = t.book2Desc;
             document.getElementById('buy-book2').textContent = t.buyBook2;
 
-            // Profile Section
             document.getElementById('about-heading').innerHTML = t.aboutHeading;
             document.getElementById('profile-role').innerHTML = t.profileRole;
             document.getElementById('profile-desc').innerHTML = t.profileDesc;
             document.getElementById('linkedin-btn').textContent = t.linkedinBtn;
 
-            // Privacy & Modal
             document.getElementById('privacy-summary').textContent = t.privacySummary;
             document.getElementById('modal-title').textContent = t.modalTitle;
             document.getElementById('modal-msg').textContent = t.modalMsg;
